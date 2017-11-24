@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170606 15:49:35.908" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\automation_verizon\Automation_demo\back_tar\scripts" id="s1" name="Scripts">
+<suite source="D:\automation_verizon\Automation_demo\back_tar\scripts\Verizon_OpenStack.robot" id="s1-s1" name="Verizon OpenStack">
+<test id="s1-s1-t1" name="Config_setup_traffic">
+<kw name="config_default">
+<kw name="Ip_address">
+<assign>
+<var>${IP}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:36.608" starttime="20170606 15:49:36.608"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:36.608" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:38.509" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:40:52 IST 2017
+
+  System load:  1.32                Processes:            824
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:40:53 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:38.509" starttime="20170606 15:49:36.608"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:49:38.509" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:49:38.509" starttime="20170606 15:49:38.509"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:38.519" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:49:38.549" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:49:38.549" starttime="20170606 15:49:38.509"></status>
+</kw>
+<kw name="IP Retreival" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:38.549" level="INFO">${output} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:38.549" starttime="20170606 15:49:38.549"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20170606 15:49:38.559" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:38.559" starttime="20170606 15:49:38.559"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:38.559" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:49:38.559" starttime="20170606 15:49:38.559"></status>
+</kw>
+<msg timestamp="20170606 15:49:38.559" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:38.559" starttime="20170606 15:49:36.608"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:38.559" starttime="20170606 15:49:38.559"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:38.559" level="INFO">Logging into '10.53.173.24:22' as 'vyos'.</msg>
+<msg timestamp="20170606 15:49:39.858" level="INFO">Read output: Linux vyos 3.13.11-1-amd64-vyos #1 SMP Wed Aug 12 02:08:05 UTC 2015 x86_64
+Welcome to VyOS.
+This system is open-source software. The exact distribution terms for 
+each module comprising the full system are described in the individual 
+files in /usr/share/doc/*/copyright.
+Last login: Tue Jun  6 06:36:05 2017 from 10.53.172.9
+vyos@vyos:~$</msg>
+<status status="PASS" endtime="20170606 15:49:39.858" starttime="20170606 15:49:38.559"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=10s</arg>
+<arg>prompt=${default_config_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:39.858" starttime="20170606 15:49:39.858"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${state_config}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:39.868" level="INFO">config</msg>
+<status status="PASS" endtime="20170606 15:49:39.868" starttime="20170606 15:49:39.858"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:40.118" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:40.118" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.118" starttime="20170606 15:49:39.868"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.118" level="INFO">[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.118" starttime="20170606 15:49:40.118"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${default_config_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.138" level="INFO">set protocols static route 0.0.0.0/0 next-hop 10.53.173.254</msg>
+<status status="PASS" endtime="20170606 15:49:40.138" starttime="20170606 15:49:40.118"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:40.158" level="INFO">[?1h=[m
+  Configuration path: [protocols static route 0.0.0.0/0 next-hop 10.53.173.254] [m already exists[m
+[m
+[K[?1l&gt;[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:40.158" level="INFO">${output} = [?1h=[m
+  Configuration path: [protocols static route 0.0.0.0/0 next-hop 10.53.173.254] [m already exists[m
+[m
+[K[?1l&gt;[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.158" starttime="20170606 15:49:40.138"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.158" level="INFO">[?1h=[m
+  Configuration path: [protocols static route 0.0.0.0/0 next-hop 10.53.173.254] [m already exists[m
+[m
+[K[?1l&gt;[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.158" starttime="20170606 15:49:40.158"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.168" level="INFO">commit</msg>
+<status status="PASS" endtime="20170606 15:49:40.168" starttime="20170606 15:49:40.158"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:40.178" level="INFO">No configuration changes to commit
+[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:40.178" level="INFO">${output} = No configuration changes to commit
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.178" starttime="20170606 15:49:40.168"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.178" level="INFO">No configuration changes to commit
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.178" starttime="20170606 15:49:40.178"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command2}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.188" level="INFO">save</msg>
+<status status="PASS" endtime="20170606 15:49:40.188" starttime="20170606 15:49:40.178"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:40.268" level="INFO">Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:40.268" level="INFO">${output} = Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:40.268" starttime="20170606 15:49:40.188"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:49:40.388" starttime="20170606 15:49:40.268"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:49:40.388" starttime="20170606 15:49:36.608"></status>
+</kw>
+<kw name="Config_Traffic_in">
+<kw name="vm_name">
+<assign>
+<var>${vm_name}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:40.388" starttime="20170606 15:49:40.388"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:40.388" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:42.305" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:23 IST 2017
+
+  System load:  0.11                Processes:            824
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:24 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:42.305" starttime="20170606 15:49:40.388"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:49:42.305" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:49:42.305" starttime="20170606 15:49:42.305"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:42.315" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:49:42.345" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:49:42.345" starttime="20170606 15:49:42.305"></status>
+</kw>
+<kw name="Vm Definition" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:42.345" level="INFO">${output} = vyosVM1</msg>
+<status status="PASS" endtime="20170606 15:49:42.345" starttime="20170606 15:49:42.345"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${vm_name}</var>
+</assign>
+<msg timestamp="20170606 15:49:42.345" level="INFO">${vm_name} = vyosVM1</msg>
+<status status="PASS" endtime="20170606 15:49:42.345" starttime="20170606 15:49:42.345"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${vm_name}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:42.345" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:49:42.345" starttime="20170606 15:49:42.345"></status>
+</kw>
+<msg timestamp="20170606 15:49:42.345" level="INFO">${vm_name} = vyosVM1</msg>
+<status status="PASS" endtime="20170606 15:49:42.345" starttime="20170606 15:49:40.388"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:42.355" starttime="20170606 15:49:42.345"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:42.355" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:44.325" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:27 IST 2017
+
+  System load:  0.1                 Processes:            826
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:27 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:44.325" starttime="20170606 15:49:42.355"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=30s</arg>
+<arg>prompt=${server_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:44.325" starttime="20170606 15:49:44.325"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${neutron_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:44.335" level="INFO">neutron net-list</msg>
+<status status="PASS" endtime="20170606 15:49:44.335" starttime="20170606 15:49:44.325"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:45.745" level="INFO">+--------------------------------+------------+--------------------------------+
+| id                             | name       | subnets                        |
++--------------------------------+------------+--------------------------------+
+| 30ebcf55-a9c1-4d48-931e-       | ext-mgmt   | 401a395b-36b9-468d-            |
+| ca5e30214476                   |            | bd95-b91b4d75ead1              |
+|                                |            | 10.53.173.0/24                 |
+| 35af6dd6-7c78-44f5-b98b-       | int-mgmt   | 72d0a10e-                      |
+| 35a8ca2fa49d                   |            | 22c9-4337-8715-3a0f1bd9c81d    |
+|                                |            | 10.72.2.0/24                   |
+| ab4cc60f-6961-4724-9150-79d01a | traffic-in | c2e7d591-6107-48aa-b7cb-       |
+| dd9f11                         |            | bc1a9c353482 10.72.24.0/24     |
++--------------------------------+------------+--------------------------------+
+root@stacknode:~#</msg>
+<msg timestamp="20170606 15:49:45.755" level="INFO">${output} = +--------------------------------+------------+--------------------------------+
+| id                             | name       | subnets                        |
++--------------------------------+--...</msg>
+<status status="PASS" endtime="20170606 15:49:45.755" starttime="20170606 15:49:44.335"></status>
+</kw>
+<kw name="Config Setup" library="VerizonDemo">
+<arguments>
+<arg>${output}</arg>
+<arg>traffic-in</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:45.755" level="INFO">ab4cc60f-6961-4724-9150-79d01a
+dd9f11</msg>
+<msg timestamp="20170606 15:49:45.755" level="INFO">${output} = ab4cc60f-6961-4724-9150-79d01add9f11</msg>
+<status status="PASS" endtime="20170606 15:49:45.755" starttime="20170606 15:49:45.755"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>nova interface-attach --net-id ${output} ${vm_name}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:45.775" level="INFO">nova interface-attach --net-id ab4cc60f-6961-4724-9150-79d01ad d9f11 vyosVM1</msg>
+<status status="PASS" endtime="20170606 15:49:45.775" starttime="20170606 15:49:45.755"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:49.085" level="INFO">root@stacknode:~#</msg>
+<msg timestamp="20170606 15:49:49.085" level="INFO">${output} = root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:49.085" starttime="20170606 15:49:45.775"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>Invalid input</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:49.085" starttime="20170606 15:49:49.085"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:49:49.205" starttime="20170606 15:49:49.085"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:49:49.205" starttime="20170606 15:49:40.388"></status>
+</kw>
+<kw name="config_interfaces">
+<kw name="Ip_address">
+<assign>
+<var>${IP}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:49.205" starttime="20170606 15:49:49.205"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:49.205" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:51.145" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:29 IST 2017
+
+  System load:  0.1                 Processes:            829
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:30 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:51.145" starttime="20170606 15:49:49.205"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:49:51.145" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:49:51.145" starttime="20170606 15:49:51.145"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:51.155" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:49:51.185" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:51.145"></status>
+</kw>
+<kw name="IP Retreival" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:51.185" level="INFO">${output} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:51.185"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20170606 15:49:51.185" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:51.185"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:51.185" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:51.185"></status>
+</kw>
+<msg timestamp="20170606 15:49:51.185" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:49.205"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:51.185" starttime="20170606 15:49:51.185"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:51.195" level="INFO">Logging into '10.53.173.24:22' as 'vyos'.</msg>
+<msg timestamp="20170606 15:49:52.355" level="INFO">Read output: Linux vyos 3.13.11-1-amd64-vyos #1 SMP Wed Aug 12 02:08:05 UTC 2015 x86_64
+Welcome to VyOS.
+This system is open-source software. The exact distribution terms for 
+each module comprising the full system are described in the individual 
+files in /usr/share/doc/*/copyright.
+Last login: Tue Jun  6 10:19:10 2017 from 10.53.172.9
+vyos@vyos:~$</msg>
+<status status="PASS" endtime="20170606 15:49:52.355" starttime="20170606 15:49:51.185"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=30s</arg>
+<arg>prompt=${default_config_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:52.355" starttime="20170606 15:49:52.355"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>config</arg>
+</arguments>
+<msg timestamp="20170606 15:49:52.355" level="INFO">config</msg>
+<status status="PASS" endtime="20170606 15:49:52.355" starttime="20170606 15:49:52.355"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:52.625" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:52.625" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:52.625" starttime="20170606 15:49:52.355"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${interface_eth0_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:52.645" level="INFO">set interfaces ethernet eth1 address 10.72.24.254/24</msg>
+<status status="PASS" endtime="20170606 15:49:52.645" starttime="20170606 15:49:52.625"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:52.705" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:52.705" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:52.705" starttime="20170606 15:49:52.645"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:52.715" level="INFO">commit</msg>
+<status status="PASS" endtime="20170606 15:49:52.715" starttime="20170606 15:49:52.705"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:53.335" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:53.335" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:53.335" starttime="20170606 15:49:52.715"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${auto_save_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:53.345" level="INFO">set interfaces ethernet eth1 speed auto</msg>
+<status status="PASS" endtime="20170606 15:49:53.345" starttime="20170606 15:49:53.335"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:53.415" level="INFO">[?1h=[m
+  Configuration path: [interfaces ethernet eth1 speed auto] already exists[m
+[m
+[K[?1l&gt;[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:53.415" level="INFO">${output} = [?1h=[m
+  Configuration path: [interfaces ethernet eth1 speed auto] already exists[m
+[m
+[K[?1l&gt;[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:53.415" starttime="20170606 15:49:53.345"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:53.425" level="INFO">commit</msg>
+<status status="PASS" endtime="20170606 15:49:53.425" starttime="20170606 15:49:53.415"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:53.436" level="INFO">No configuration changes to commit
+[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:53.436" level="INFO">${output} = No configuration changes to commit
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:53.437" starttime="20170606 15:49:53.425"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command2}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:53.442" level="INFO">save</msg>
+<status status="PASS" endtime="20170606 15:49:53.442" starttime="20170606 15:49:53.437"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:53.518" level="INFO">Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:49:53.518" level="INFO">${output} = Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:49:53.518" starttime="20170606 15:49:53.442"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:49:53.665" starttime="20170606 15:49:53.518"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:49:53.665" starttime="20170606 15:49:49.205"></status>
+</kw>
+<kw name="Ip_address">
+<assign>
+<var>${ip}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:53.665" starttime="20170606 15:49:53.665"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:53.665" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:55.532" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:36 IST 2017
+
+  System load:  0.32                Processes:            832
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:36 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:55.532" starttime="20170606 15:49:53.665"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:49:55.532" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:49:55.532" starttime="20170606 15:49:55.532"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:55.542" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:49:55.562" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:55.532"></status>
+</kw>
+<kw name="IP Retreival" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:55.562" level="INFO">${output} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:55.562"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20170606 15:49:55.562" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:55.562"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:55.562" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:55.562"></status>
+</kw>
+<msg timestamp="20170606 15:49:55.562" level="INFO">${ip} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:53.665"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${ip}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:55.562" starttime="20170606 15:49:55.562"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:55.562" level="INFO">Logging into '10.53.173.24:22' as 'vyos'.</msg>
+<msg timestamp="20170606 15:49:56.717" level="INFO">Read output: Linux vyos 3.13.11-1-amd64-vyos #1 SMP Wed Aug 12 02:08:05 UTC 2015 x86_64
+Welcome to VyOS.
+This system is open-source software. The exact distribution terms for 
+each module comprising the full system are described in the individual 
+files in /usr/share/doc/*/copyright.
+Last login: Tue Jun  6 10:19:23 2017 from 10.53.172.9
+vyos@vyos:~$</msg>
+<status status="PASS" endtime="20170606 15:49:56.717" starttime="20170606 15:49:55.562"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=30s</arg>
+<arg>prompt=${default_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:56.717" starttime="20170606 15:49:56.717"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${command_interface}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:56.727" level="INFO">show interfaces</msg>
+<status status="PASS" endtime="20170606 15:49:56.727" starttime="20170606 15:49:56.717"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:56.797" level="INFO">[?1h=Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down[m
+Interface        IP Address                        S/L  Description[m
+---------        ----------                        ---  -----------[m
+eth0             10.53.173.24/24                   u/u  [m
+eth1             10.72.24.254/24                   u/u  [m
+eth2             -                                 A/D  [m
+lo               127.0.0.1/8                       u/u  [m
+                 ::1/128[m
+[K[?1l&gt;vyos@vyos:~$</msg>
+<msg timestamp="20170606 15:49:56.797" level="INFO">${output} = [?1h=Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down[m
+Interface        IP Address                        S/L  Description[m
+---------        ----------                        --- ...</msg>
+<status status="PASS" endtime="20170606 15:49:56.797" starttime="20170606 15:49:56.727"></status>
+</kw>
+<kw name="Validate Interfaces Vyos" library="VerizonDemo">
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:56.797" level="INFO">${output} = True</msg>
+<status status="PASS" endtime="20170606 15:49:56.797" starttime="20170606 15:49:56.797"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:56.797" starttime="20170606 15:49:56.797"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:49:56.917" starttime="20170606 15:49:56.797"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:49:56.917" critical="yes" starttime="20170606 15:49:36.608"></status>
+</test>
+<test id="s1-s1-t2" name="ixia">
+<kw name="Ip_address">
+<assign>
+<var>${ip}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:56.917" starttime="20170606 15:49:56.917"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:56.917" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:49:58.827" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:40 IST 2017
+
+  System load:  0.37                Processes:            832
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:41 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:49:58.827" starttime="20170606 15:49:56.917"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:49:58.827" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:49:58.827" starttime="20170606 15:49:58.827"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:58.837" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:49:58.867" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:49:58.867" starttime="20170606 15:49:58.827"></status>
+</kw>
+<kw name="IP Retreival" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:49:58.867" level="INFO">${output} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:58.867" starttime="20170606 15:49:58.867"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20170606 15:49:58.867" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:58.867" starttime="20170606 15:49:58.867"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:58.867" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:49:58.867" starttime="20170606 15:49:58.867"></status>
+</kw>
+<msg timestamp="20170606 15:49:58.877" level="INFO">${ip} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:49:58.877" starttime="20170606 15:49:56.917"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${ip}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:49:58.877" starttime="20170606 15:49:58.877"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170606 15:49:58.877" level="INFO">Logging into '10.53.173.24:22' as 'vyos'.</msg>
+<msg timestamp="20170606 15:50:00.057" level="INFO">Read output: Linux vyos 3.13.11-1-amd64-vyos #1 SMP Wed Aug 12 02:08:05 UTC 2015 x86_64
+Welcome to VyOS.
+This system is open-source software. The exact distribution terms for 
+each module comprising the full system are described in the individual 
+files in /usr/share/doc/*/copyright.
+Last login: Tue Jun  6 10:19:27 2017 from 10.53.172.9
+vyos@vyos:~$</msg>
+<status status="PASS" endtime="20170606 15:50:00.057" starttime="20170606 15:49:58.877"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=10s</arg>
+<arg>prompt=${default_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:50:00.057" starttime="20170606 15:50:00.057"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${packets_eth0}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:00.077" level="INFO">show interfaces ethernet eth0</msg>
+<status status="PASS" endtime="20170606 15:50:00.077" starttime="20170606 15:50:00.057"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output_eth0}</var>
+</assign>
+<msg timestamp="20170606 15:50:00.137" level="INFO">[?1h=eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:ba:e0:cc brd ff:ff:ff:ff:ff:ff[m
+    inet 10.53.173.24/24 brd 10.53.173.255 scope global eth0[m
+       valid_lft forever preferred_lft forever[m
+    inet6 fe80::f816:3eff:feba:e0cc/64 scope link [m
+       valid_lft forever preferred_lft forever[m
+[m
+    RX:  bytes    packets     errors    dropped    overrun      mcast[m
+     367111866    5487700          0          0          0          0[m
+    TX:  bytes    packets     errors    dropped    carrier collisions[m
+    9052640942    8790551          0          0          0          0[m
+[K[?1l&gt;vyos@vyos:~$</msg>
+<msg timestamp="20170606 15:50:00.137" level="INFO">${output_eth0} = [?1h=eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:ba:e0:cc brd ff:ff:ff:ff:ff:ff[m
+    inet 10.53.173.24/24 ...</msg>
+<status status="PASS" endtime="20170606 15:50:00.137" starttime="20170606 15:50:00.077"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${packets_eth1}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:00.147" level="INFO">show interfaces ethernet eth1</msg>
+<status status="PASS" endtime="20170606 15:50:00.147" starttime="20170606 15:50:00.137"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output_eth1}</var>
+</assign>
+<msg timestamp="20170606 15:50:00.207" level="INFO">[?1h=eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:59:63:b3 brd ff:ff:ff:ff:ff:ff[m
+    inet 10.72.24.254/24 brd 10.72.24.255 scope global eth1[m
+       valid_lft forever preferred_lft forever[m
+    inet6 fe80::f816:3eff:fe59:63b3/64 scope link [m
+       valid_lft forever preferred_lft forever[m
+[m
+    RX:  bytes    packets     errors    dropped    overrun      mcast[m
+    9052543449    8789848          0          0          0          0[m
+    TX:  bytes    packets     errors    dropped    carrier collisions[m
+     339397923    5437089          0          0          0          0[m
+[K[?1l&gt;vyos@vyos:~$</msg>
+<msg timestamp="20170606 15:50:00.207" level="INFO">${output_eth1} = [?1h=eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:59:63:b3 brd ff:ff:ff:ff:ff:ff[m
+    inet 10.72.24.254/24 ...</msg>
+<status status="PASS" endtime="20170606 15:50:00.207" starttime="20170606 15:50:00.147"></status>
+</kw>
+<kw name="Packets Capture" library="VerizonDemo">
+<arguments>
+<arg>${output_eth0}</arg>
+</arguments>
+<assign>
+<var>${receiving_packets_eth0_before}</var>
+<var>${transmission_packets_eth0_before}</var>
+</assign>
+<msg timestamp="20170606 15:50:00.207" level="INFO">${receiving_packets_eth0_before} = 8790551</msg>
+<msg timestamp="20170606 15:50:00.207" level="INFO">${transmission_packets_eth0_before} = 5487700</msg>
+<status status="PASS" endtime="20170606 15:50:00.207" starttime="20170606 15:50:00.207"></status>
+</kw>
+<kw name="Packets Capture" library="VerizonDemo">
+<arguments>
+<arg>${output_eth1}</arg>
+</arguments>
+<assign>
+<var>${receiving_packets_eth1_before}</var>
+<var>${transmission_packets_eth1_before}</var>
+</assign>
+<msg timestamp="20170606 15:50:00.207" level="INFO">${receiving_packets_eth1_before} = 5437089</msg>
+<msg timestamp="20170606 15:50:00.207" level="INFO">${transmission_packets_eth1_before} = 8789848</msg>
+<status status="PASS" endtime="20170606 15:50:00.207" starttime="20170606 15:50:00.207"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170606 15:50:02.207" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170606 15:50:02.207" starttime="20170606 15:50:00.207"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tclsh85 sample_ixload_final_http.tcl ${ip}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:02.217" level="INFO">Running command 'tclsh85 sample_ixload_final_http.tcl 10.53.173.24 2&gt;&amp;1'.</msg>
+<msg timestamp="20170606 15:50:04.787" level="INFO">${output} = couldn't read file "sample_ixload_final_http.tcl": no such file or directory</msg>
+<status status="PASS" endtime="20170606 15:50:04.787" starttime="20170606 15:50:02.207"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:04.787" level="INFO">couldn't read file "sample_ixload_final_http.tcl": no such file or directory</msg>
+<status status="PASS" endtime="20170606 15:50:04.787" starttime="20170606 15:50:04.787"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170606 15:50:09.800" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170606 15:50:09.800" starttime="20170606 15:50:04.797"></status>
+</kw>
+<kw name="Validate Packet Loss Openstack" library="VerizonDemo">
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:09.850" level="INFO">Http Failed percentage is 6.61</msg>
+<msg timestamp="20170606 15:50:09.850" level="INFO">${output} = True</msg>
+<status status="PASS" endtime="20170606 15:50:09.850" starttime="20170606 15:50:09.800"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:50:09.850" starttime="20170606 15:50:09.850"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170606 15:50:12.852" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170606 15:50:12.852" starttime="20170606 15:50:09.850"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>show interfaces ethernet eth0</arg>
+</arguments>
+<msg timestamp="20170606 15:50:12.862" level="INFO">show interfaces ethernet eth0</msg>
+<status status="PASS" endtime="20170606 15:50:12.862" starttime="20170606 15:50:12.852"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output_eth0}</var>
+</assign>
+<msg timestamp="20170606 15:50:12.932" level="INFO">[?1h=eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:ba:e0:cc brd ff:ff:ff:ff:ff:ff[m
+    inet 10.53.173.24/24 brd 10.53.173.255 scope global eth0[m
+       valid_lft forever preferred_lft forever[m
+    inet6 fe80::f816:3eff:feba:e0cc/64 scope link [m
+       valid_lft forever preferred_lft forever[m
+[m
+    RX:  bytes    packets     errors    dropped    overrun      mcast[m
+     367115668    5487752          0          0          0          0[m
+    TX:  bytes    packets     errors    dropped    carrier collisions[m
+    9052643402    8790561          0          0          0          0[m
+[K[?1l&gt;vyos@vyos:~$</msg>
+<msg timestamp="20170606 15:50:12.932" level="INFO">${output_eth0} = [?1h=eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:ba:e0:cc brd ff:ff:ff:ff:ff:ff[m
+    inet 10.53.173.24/24 ...</msg>
+<status status="PASS" endtime="20170606 15:50:12.932" starttime="20170606 15:50:12.862"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>show interfaces ethernet eth1</arg>
+</arguments>
+<msg timestamp="20170606 15:50:12.942" level="INFO">show interfaces ethernet eth1</msg>
+<status status="PASS" endtime="20170606 15:50:12.942" starttime="20170606 15:50:12.932"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output_eth1}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.002" level="INFO">[?1h=eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:59:63:b3 brd ff:ff:ff:ff:ff:ff[m
+    inet 10.72.24.254/24 brd 10.72.24.255 scope global eth1[m
+       valid_lft forever preferred_lft forever[m
+    inet6 fe80::f816:3eff:fe59:63b3/64 scope link [m
+       valid_lft forever preferred_lft forever[m
+[m
+    RX:  bytes    packets     errors    dropped    overrun      mcast[m
+    9052543449    8789848          0          0          0          0[m
+    TX:  bytes    packets     errors    dropped    carrier collisions[m
+     339397923    5437089          0          0          0          0[m
+[K[?1l&gt;vyos@vyos:~$</msg>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${output_eth1} = [?1h=eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group[m  default qlen 1000[m
+    link/ether fa:16:3e:59:63:b3 brd ff:ff:ff:ff:ff:ff[m
+    inet 10.72.24.254/24 ...</msg>
+<status status="PASS" endtime="20170606 15:50:13.002" starttime="20170606 15:50:12.942"></status>
+</kw>
+<kw name="Packets Capture" library="VerizonDemo">
+<arguments>
+<arg>${output_eth0}</arg>
+</arguments>
+<assign>
+<var>${receiving_packets_eth0_after}</var>
+<var>${transmission_packets_eth0_after}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${receiving_packets_eth0_after} = 8790561</msg>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${transmission_packets_eth0_after} = 5487752</msg>
+<status status="PASS" endtime="20170606 15:50:13.002" starttime="20170606 15:50:13.002"></status>
+</kw>
+<kw name="Packets Capture" library="VerizonDemo">
+<arguments>
+<arg>${output_eth1}</arg>
+</arguments>
+<assign>
+<var>${receiving_packets_eth1_after}</var>
+<var>${transmission_packets_eth1_after}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${receiving_packets_eth1_after} = 5437089</msg>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${transmission_packets_eth1_after} = 8789848</msg>
+<status status="PASS" endtime="20170606 15:50:13.002" starttime="20170606 15:50:13.002"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${receiving_packets_eth0_after}-${receiving_packets_eth0_before}</arg>
+</arguments>
+<assign>
+<var>${diff_packets_eth0_rx}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.002" level="INFO">${diff_packets_eth0_rx} = 10</msg>
+<status status="PASS" endtime="20170606 15:50:13.002" starttime="20170606 15:50:13.002"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${transmission_packets_eth0_after}-${transmission_packets_eth0_before}</arg>
+</arguments>
+<assign>
+<var>${diff_packets_eth0_tx}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.012" level="INFO">${diff_packets_eth0_tx} = 52</msg>
+<status status="PASS" endtime="20170606 15:50:13.012" starttime="20170606 15:50:13.002"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${receiving_packets_eth1_after}-${receiving_packets_eth1_before}</arg>
+</arguments>
+<assign>
+<var>${diff_packets_eth1_rx}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.012" level="INFO">${diff_packets_eth1_rx} = 0</msg>
+<status status="PASS" endtime="20170606 15:50:13.012" starttime="20170606 15:50:13.012"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${transmission_packets_eth1_after}-${transmission_packets_eth1_before}</arg>
+</arguments>
+<assign>
+<var>${diff_packets_eth1_tx}</var>
+</assign>
+<msg timestamp="20170606 15:50:13.012" level="INFO">${diff_packets_eth1_tx} = 0</msg>
+<status status="PASS" endtime="20170606 15:50:13.012" starttime="20170606 15:50:13.012"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:50:13.112" starttime="20170606 15:50:13.012"></status>
+</kw>
+<kw name="delete_interfaces">
+<kw name="Ip_address">
+<assign>
+<var>${IP}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:50:13.112" starttime="20170606 15:50:13.112"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:13.112" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170606 15:50:14.952" level="INFO">Read output: Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-31-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Jun  6 15:49:43 IST 2017
+
+  System load:  0.37                Processes:            833
+  Usage of /:   23.1% of 664.72GB   Users logged in:      1
+  Memory usage: 7%                  IP address for br-ex: 10.53.173.7
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+81 packages can be updated.
+55 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Tue Jun  6 15:49:44 2017 from 10.53.172.9
+root@stacknode:~#</msg>
+<status status="PASS" endtime="20170606 15:50:14.952" starttime="20170606 15:50:13.112"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>login to router is succesful</arg>
+</arguments>
+<msg timestamp="20170606 15:50:14.952" level="INFO">login to router is succesful</msg>
+<status status="PASS" endtime="20170606 15:50:14.952" starttime="20170606 15:50:14.952"></status>
+</kw>
+<kw name="Get File" library="SSHLibrary">
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<arguments>
+<arg>${Ip_details_file}</arg>
+<arg>${IP_local_file}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:14.962" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170606 15:50:14.982" level="INFO">'//root//robot_input_openstack.txt' -&gt; 'D:\Automation_verizon\Automation_demo\back_tar\scripts\robot_input_openstack.txt'</msg>
+<status status="PASS" endtime="20170606 15:50:14.982" starttime="20170606 15:50:14.952"></status>
+</kw>
+<kw name="IP Retreival" library="VerizonDemo">
+<arguments>
+<arg>${IP_local_file}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:14.992" level="INFO">${output} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:50:14.992" starttime="20170606 15:50:14.992"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${output}</arg>
+</arguments>
+<assign>
+<var>${IP}</var>
+</assign>
+<msg timestamp="20170606 15:50:14.992" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:50:14.992" starttime="20170606 15:50:14.992"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:14.992" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170606 15:50:14.992" starttime="20170606 15:50:14.992"></status>
+</kw>
+<msg timestamp="20170606 15:50:14.992" level="INFO">${IP} = 10.53.173.24</msg>
+<status status="PASS" endtime="20170606 15:50:14.992" starttime="20170606 15:50:13.112"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:50:14.992" starttime="20170606 15:50:14.992"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:14.992" level="INFO">Logging into '10.53.173.24:22' as 'vyos'.</msg>
+<msg timestamp="20170606 15:50:16.152" level="INFO">Read output: Linux vyos 3.13.11-1-amd64-vyos #1 SMP Wed Aug 12 02:08:05 UTC 2015 x86_64
+Welcome to VyOS.
+This system is open-source software. The exact distribution terms for 
+each module comprising the full system are described in the individual 
+files in /usr/share/doc/*/copyright.
+Last login: Tue Jun  6 10:19:31 2017 from 10.53.172.9
+vyos@vyos:~$</msg>
+<status status="PASS" endtime="20170606 15:50:16.152" starttime="20170606 15:50:14.992"></status>
+</kw>
+<kw name="Set Client Configuration" library="SSHLibrary">
+<doc>Update the `configuration` of the current connection.</doc>
+<arguments>
+<arg>timeout=30s</arg>
+<arg>prompt=${default_config_prompt}</arg>
+</arguments>
+<status status="PASS" endtime="20170606 15:50:16.152" starttime="20170606 15:50:16.152"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>config</arg>
+</arguments>
+<msg timestamp="20170606 15:50:16.162" level="INFO">config</msg>
+<status status="PASS" endtime="20170606 15:50:16.162" starttime="20170606 15:50:16.152"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:16.412" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:50:16.412" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:50:16.412" starttime="20170606 15:50:16.162"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${interface_eth0_command_delete}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:16.432" level="INFO">delete interfaces ethernet eth1 address 10.72.24.254/24</msg>
+<status status="PASS" endtime="20170606 15:50:16.432" starttime="20170606 15:50:16.412"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:16.452" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:50:16.452" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:50:16.452" starttime="20170606 15:50:16.432"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:16.452" level="INFO">commit</msg>
+<status status="PASS" endtime="20170606 15:50:16.452" starttime="20170606 15:50:16.452"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:17.017" level="INFO">[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:50:17.018" level="INFO">${output} = [edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:50:17.018" starttime="20170606 15:50:16.452"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>${save_command2}</arg>
+</arguments>
+<msg timestamp="20170606 15:50:17.022" level="INFO">save</msg>
+<status status="PASS" endtime="20170606 15:50:17.022" starttime="20170606 15:50:17.018"></status>
+</kw>
+<kw name="Read Until Prompt" library="SSHLibrary">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170606 15:50:17.102" level="INFO">Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<msg timestamp="20170606 15:50:17.102" level="INFO">${output} = Saving configuration to '/config/config.boot'...
+Done
+[edit]
+vyos@vyos#</msg>
+<status status="PASS" endtime="20170606 15:50:17.102" starttime="20170606 15:50:17.022"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20170606 15:50:17.222" starttime="20170606 15:50:17.102"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:50:17.222" starttime="20170606 15:50:13.112"></status>
+</kw>
+<status status="PASS" endtime="20170606 15:50:17.222" critical="yes" starttime="20170606 15:49:56.917"></status>
+</test>
+<status status="PASS" endtime="20170606 15:50:17.222" starttime="20170606 15:49:35.948"></status>
+</suite>
+<status status="PASS" endtime="20170606 15:50:17.222" starttime="20170606 15:49:35.928"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Scripts" pass="2">Scripts</stat>
+<stat fail="0" id="s1-s1" name="Verizon OpenStack" pass="2">Scripts.Verizon OpenStack</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

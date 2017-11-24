@@ -1,0 +1,75 @@
+
+
+<!-- <iframe ng-src="{{url}}" width="100%" height="1000" style="margin-top:20px;border:none;margin-left:-10px"></iframe> -->
+
+<div class="col-md-3" style="width:25%;margin-top:4%;" >
+<form name="myvnfForm">
+<label for="ovnfname">VNF Name : </label>
+<input type="text" id="vnfnameid" ng-model="onbrdvnfName" style="border-radius:20px;margin-left: 4%;width:125px;height:27px;"/>
+<span style="color:red" "margin-right:100%">{{ername}}</span><br />
+</form>
+</div>
+
+
+<div class="col-md-3" style="width:25%;margin-top:4%">
+<label for="onvnftype">VNF Type : </label>
+<select id="onvnftype" ng-model="selectedovnftype" ng-change="onvnftypechange(selectedovnftype);" style="height:27px;border-radius:20px;width:125px;">
+<option value="" >--Please Select--</option>
+<option value="1,VRouter" >VRouter</option>
+<option value="2,Firewall">Firewall</option>
+</select>
+<span style="color:red" "margin-right:100%">{{msg}}</span><br />
+</div >
+
+<div class="col-md-3" style="width:25%;margin-top:4%">
+<label for="openstacktype">Open Stack : </label>
+<select id="openstacktype" ng-model="onselectedOpenstack" ng-change="inOpenstackChange(onselectedOpenstack);" style="height:27px;border-radius:20px;width:125px;">
+<option value="" >--Please Select--</option>
+<option value="1,Vmware" >Vmware</option>
+<option value="2,Redhat">Redhat</option>
+</select>
+<span style="color:red" "margin-right:100%">{{msg1}}</span><br />
+</div >
+
+
+<div class="col-md-3" style="width:25%;margin-top:4%">
+<label for="onbrdimage">VNF Images : </label>
+<select id="onbrdimage" ng-model="selectedoimg" ng-change="onimageChange(selectedoimg);" style="height:27px;border-radius:20px;width:125px;">
+<option value="" >--Please Select--</option>
+<option ng-repeat="l in onimages" value="{{l.ImageName}}" >{{l.ImageName}}</option>
+</select>
+<span style="color:red" "margin-right:100%">{{msg2}}</span><br />
+</div >
+
+
+<div class="col-md-3" style="width:25%;margin-top:4%;">
+<label for="onflv">Flavours : </label>
+ <select id="onflv" ng-model="selectedflvrs" ng-change="onbrdflvChange(selectedflvrs);" style="height:27px;border-radius:20px;width:125px;margin-left: 5%;margin-top:35%">  '
+ <option value="" >--Please Select--</option>
+<option ng-repeat="x in onflvs" value="{{x.FlavourName}}" >{{x.FlavourName}}</option>
+</select> 
+<span style="color:red" "margin-right:100%">{{msg3}}</span><br />
+</div>
+
+<span id="overlay2" ng-show="searchButton == 'seraching'" style="margin-left:25%;margin-top:5%">
+    <img class="loading_circle" src="../img/loading.gif" width="60px" height="60px"></img>
+	
+</span>
+ 
+<div class="row">
+<div class="col-md-3" style="width:40%;margin-left:35%;margin-top:10%">
+<input type="button" value="Onboard" class="btn btn-primary" style="width;150px;" ng-click="onboardfile(onbrdvnfName);"/>
+<input type="button" value="Reset" class="btn btn-primary" style="width;150px;" ng-click="onbrdvnfName='';selectedovnftype='';onselectedOpenstack='';selectedoimg='';selectedflvrs='';"/>
+<input type="button" value="Cancel" class="btn btn-primary" style="width;150px;"/>
+</div></div>
+
+
+
+<div ng-if="onboardFileSuccess" class="alert alert-success" style="margin-top:2%;">
+	 <strong>Success!</strong> {{osuccessmessage}}
+</div> 
+<div ng-if="onboardFileFailure" class="alert alert-danger" style="margin-top:2%;">
+	 <strong>Failure!</strong> {{osuccessmessage}}
+</div> 
+</div>
+

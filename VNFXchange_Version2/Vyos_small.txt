@@ -1,0 +1,3 @@
+Ram:2048
+disk:20
+vcpus:8

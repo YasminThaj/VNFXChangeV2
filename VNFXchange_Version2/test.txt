@@ -1,0 +1,3 @@
+Ram:512
+Disk:8
+vcpus:2

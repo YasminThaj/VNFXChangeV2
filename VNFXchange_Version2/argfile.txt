@@ -1,0 +1,14 @@
+--outputdir
+C:\xampp\htdocs\VNFXchange\Public\app\views
+-C
+off
+-W
+107
+--suite
+Scripts.Verizon OpenStack
+--test
+Scripts.Verizon OpenStack.Config_setup_traffic
+--suite
+Scripts.Verizon OpenStack
+--test
+Scripts.Verizon OpenStack.ixia

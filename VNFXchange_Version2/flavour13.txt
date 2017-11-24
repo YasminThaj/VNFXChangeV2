@@ -1,0 +1,3 @@
+Ram:2gb
+memory:89
+cpu:5khj

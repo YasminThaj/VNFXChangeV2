@@ -1,0 +1,6 @@
+VNFName,Demo1,Demo2,Demo3
+Cpus,8,4,8
+Memory,4GB,8GB,2GB
+Status,Success,Success,Success
+onboardedDate,24-04-2017,24-04-2017,24-04-2017
+IpAddress,10.53.172.7,10.53.172.5,10.53.172.9

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170828 15:53:53.890" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\automation_verizon\Automation_demo\back_tar\scripts" id="s1" name="Scripts">
+<suite source="D:\automation_verizon\Automation_demo\back_tar\scripts\Verizon_OpenStack.robot" id="s1-s1" name="Verizon OpenStack">
+<test id="s1-s1-t1" name="Config_setup_traffic">
+<kw name="config_default">
+<kw name="Ip_address">
+<assign>
+<var>${IP}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170828 15:53:55.478" starttime="20170828 15:53:55.478"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170828 15:53:55.479" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170828 15:53:58.485" level="FAIL">timeout: timed out</msg>
+<status status="FAIL" endtime="20170828 15:53:58.485" starttime="20170828 15:53:55.479"></status>
+</kw>
+<status status="FAIL" endtime="20170828 15:53:58.486" starttime="20170828 15:53:55.478"></status>
+</kw>
+<status status="FAIL" endtime="20170828 15:53:58.486" starttime="20170828 15:53:55.478"></status>
+</kw>
+<status status="FAIL" endtime="20170828 15:53:58.487" critical="yes" starttime="20170828 15:53:55.477">timeout: timed out</status>
+</test>
+<test id="s1-s1-t2" name="ixia">
+<kw name="Ip_address">
+<assign>
+<var>${ip}</var>
+</assign>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${server_IP}</arg>
+</arguments>
+<status status="PASS" endtime="20170828 15:53:58.491" starttime="20170828 15:53:58.489"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>${server_username}</arg>
+<arg>${server_password}</arg>
+</arguments>
+<msg timestamp="20170828 15:53:58.492" level="INFO">Logging into '10.53.173.7:22' as 'root'.</msg>
+<msg timestamp="20170828 15:54:01.494" level="FAIL">timeout: timed out</msg>
+<status status="FAIL" endtime="20170828 15:54:01.495" starttime="20170828 15:53:58.492"></status>
+</kw>
+<status status="FAIL" endtime="20170828 15:54:01.495" starttime="20170828 15:53:58.489"></status>
+</kw>
+<status status="FAIL" endtime="20170828 15:54:01.496" critical="yes" starttime="20170828 15:53:58.488">timeout: timed out</status>
+</test>
+<status status="FAIL" endtime="20170828 15:54:01.497" starttime="20170828 15:53:54.951"></status>
+</suite>
+<status status="FAIL" endtime="20170828 15:54:01.500" starttime="20170828 15:53:54.915"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Scripts" pass="0">Scripts</stat>
+<stat fail="2" id="s1-s1" name="Verizon OpenStack" pass="0">Scripts.Verizon OpenStack</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

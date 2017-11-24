@@ -1,0 +1,644 @@
+
+################################################################################
+## 08/16/2017 18:06:51: Log Start PID=8236
+################################################################################
+
+*Info 08/16 18:06:52.3 Chassis Chain: Validating that 192.168.31.42 has a valid network address.
+*Info 08/16 18:06:52.3 Chassis Chain: Chassis 192.168.31.42 has a valid network address.
+*Info 08/16 18:06:52.3 Chassis Chain: Validating that 192.168.31.42 accepts incoming connections. Will try to connect for 10 seconds.
+*Debug 08/16 18:06:53.16 Chassis Chain: IxLoad encountered the following error when connecting to chassis 192.168.31.42 : No connection could be made because the target machine actively refused it.
+*Info 08/16 18:06:53.16 Chassis Chain: Validation for 192.168.31.42 is completed. IP is valid and connection succeeded.
+*Info 08/16 18:06:53.17 ixChassis 192.168.31.42: Connecting to chassis 192.168.31.42
+*Debug 08/16 18:06:53.22 ixChassis 192.168.31.42: Starting Async Callback
+*Debug 08/16 18:06:53.23 ixChassis 192.168.31.42: Blocking for response, this is a wizard, tcl api callback or apply config or start run scenario
+*Debug 08/16 18:06:53.868 ixChassis 192.168.31.42: Async callback received -- callbackEstablishConnection
+*Debug 08/16 18:06:53.872 ixChassis 192.168.31.42: Chassis 192.168.31.42 installs IxOS 8.10.1250.8 EA-PATCH1
+*Debug 08/16 18:06:54.23 ixChassis 192.168.31.42: Blocking for response, this is a wizard, tcl api callback or apply config or start run scenario
+*Debug 08/16 18:06:54.898 ixChassis 192.168.31.42: Chassis 192.168.31.42 installs IxOS 8.10.1250.8 EA-PATCH1
+*Debug 08/16 18:06:54.979 ixChassis 192.168.31.42: Card = 1, name = Xcellon-Ultra NP, number of ports = 13
+*Debug 08/16 18:06:55.321 ixChassis 192.168.31.42: Blocking for response, this is a wizard, tcl api callback or apply config or start run scenario
+*Debug 08/16 18:06:55.323 ixPort Port 1.1.1: port (1,1,1) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.325 ixPort Port 1.1.2: port (1,1,2) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.325 ixPort Port 1.1.3: port (1,1,3) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.326 ixPort Port 1.1.4: port (1,1,4) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.328 ixPort Port 1.1.5: port (1,1,5) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.328 ixPort Port 1.1.6: port (1,1,6) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.329 ixPort Port 1.1.7: port (1,1,7) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.331 ixPort Port 1.1.8: port (1,1,8) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.332 ixPort Port 1.1.9: port (1,1,9) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.332 ixPort Port 1.1.10: port (1,1,10) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.334 ixPort Port 1.1.11: port (1,1,11) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.335 ixPort Port 1.1.12: port (1,1,12) operationModesMap={0: True, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.335 ixPort Port 1.1.13: port (1,1,13) operationModesMap={0: False, 1: True, 2: False, 3: False, 4: False, 8: False}
+*Debug 08/16 18:06:55.336 ixChassis 192.168.31.42: Card = 2, name = slot empty, number of ports = 0
+*Debug 08/16 18:06:55.355 Chassis Chain: Creating chassis watch. Monitoring for event mask 7
+*Info 08/16 18:06:55.371 ixChassis 192.168.31.42: Connected successfully to the chassis 192.168.31.42
+*Debug 08/16 18:06:55.375 Chassis Chain: BLOCK = True
+*Debug 08/16 18:06:56.94 Chassis Chain: Total wait time for ports to link up = 0.0, max wait time = 30
+*Debug 08/16 18:06:56.134 Chassis Chain: chassis 192.168.31.42 connect return as 192.168.31.42
+*Debug 08/16 18:06:56.134 Chassis Chain: addChassis hwMismatchChassis=[]
+*Debug 08/16 18:06:56.638 ixViewOptions : ixViewOptions initialised successfully
+*Debug 08/16 18:06:56.641 NetTraffic None@None: ###### CHANGED None@None:
+*Debug 08/16 18:06:56.641 NetTraffic None@None:        None@None Acceleration Throughput from: True to: False
+*Console 08/16 18:06:56.642 : !!WARNING!! Creating network group with no chassis chain!!!
+*Debug 08/16 18:06:56.653 Test Server: ##### statManagerAddPorts [(1,1,9)]
+*Debug 08/16 18:06:56.653 Test Server: ##### port path 192.168.31.42/Card1/Port9
+*Debug 08/16 18:06:56.653 Test Server: AddPorts ['192.168.31.42/Card1/Port9'] to stat manager
+*Debug 08/16 18:06:56.653 Test Server: ##### PortList.Add 192.168.31.42/Card1/Port9
+*Debug 08/16 18:06:56.653 Test Server: ##### action AddPorts
+*Console 08/16 18:06:56.654 : CREATING A PORT GROUP ON DEMAND
+*Console 08/16 18:06:56.671 : Created port group with object id '81d07e3f-594b-492b-9b03-722dfaa24ea5'
+*Debug 08/16 18:06:56.934 ixNetProxy : convertValue failed for key name. Returning defaultValue
+*Debug 08/16 18:06:56.937 Activity newAgent1: convertValue failed for key _tcl. Returning defaultValue
+*Debug 08/16 18:06:57.138 Chassis Chain: Received chassis watch 192.168.31.42 - eventType: 2, oldValue: 1, newValue 1 err None
+*Debug 08/16 18:06:57.140 Chassis Chain: ChassisManager:isInitEvent method. CurrentValue not in xml format: 1
+*Debug 08/16 18:06:57.338 Port Event Viewer: _createPlugin: classname=DI_ErrorsClasses namespace=IxLoad.Protocols.HTTP_Client.HTTP_Events filename=Plugins\agent\HTTP_Client\HTTPClient.UI.dll
+*Debug 08/16 18:06:57.359 Port Event Viewer: EventClassManager.PluginActionEvent EVENT_CLASS_REGISTRATION RegisterEventClassData { IsRegistering=True, EventClassId=0 }
+*Debug 08/16 18:06:57.361 Port Event Viewer: registerPluginsForAgent: DI_ErrorsClasses IxLoad.Protocols.HTTP_Client.HTTP_Events Plugins\agent\HTTP_Client\HTTPClient.UI.dll refcount=1
+*Debug 08/16 18:06:57.364 ixPluginServicesRegistry: unregistered all of the activities - _providerDict={}
+*Debug 08/16 18:06:57.364 ixPluginServicesRegistry: registered activity HTTPClient1 - _providerDict={}
+*Debug 08/16 18:06:57.365 NetTraffic Traffic1@Network1: Community Traffic1@Network1 changing role from None to Client
+*Debug 08/16 18:06:57.365 NetTraffic Traffic1@Network1: Activity HTTPClient1 returned default port map policy : portPairs
+*Debug 08/16 18:06:57.365 NetTraffic Traffic1@Network1: Final default port map policy : portPairs
+*Console 08/16 18:06:57.391 : SYNC: Network1 @ Wed Aug 16 18:06:57 2017 - duration - 0.0239999294281
+*Debug 08/16 18:06:57.397 Activity HTTPClient1: convertValue failed for key _tcl. Returning defaultValue
+*Debug 08/16 18:06:57.401 NetTraffic Traffic1@Network1: Activity HTTPClient1 returned default port map policy : portPairs
+*Debug 08/16 18:06:57.401 NetTraffic Traffic1@Network1: Final default port map policy : portPairs
+*Debug 08/16 18:06:57.403 NetTraffic Traffic1@Network1: Activity HTTPClient1 returned default port map policy : portPairs
+*Debug 08/16 18:06:57.403 NetTraffic Traffic1@Network1: Final default port map policy : portPairs
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1: ###### CHANGED Traffic1@Network1:
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1:        Traffic1@Network1 Acceleration Throughput from: True to: False
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1: ###### CHANGED Traffic1@Network1:
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1:        Traffic1@Network1 Acceleration Throughput from: False to: True
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1: ###### CHANGED Traffic1@Network1:
+*Debug 08/16 18:06:57.404 NetTraffic Traffic1@Network1:        Traffic1@Network1 Acceleration Throughput from: False to: True
+*Debug 08/16 18:06:57.405 NetTraffic Traffic1@Network1: ###### CHANGED Traffic1@Network1:
+*Debug 08/16 18:06:57.405 NetTraffic Traffic1@Network1:        Traffic1@Network1 Performance Acceleration from: False to: True
+*Debug 08/16 18:06:57.407 Test: Frame size distribution view NOT SUPPORTED - Test option is not enabled
+*Debug 08/16 18:06:57.417 Stat Controller: INITIALIZING THE STAT CONTROLLER.
+*Debug 08/16 18:06:57.418 Stat Controller: Stat viewer instance ID = ixload_2
+*Debug 08/16 18:06:57.418 Stat Controller: __initTestServer () ends
+*Debug 08/16 18:06:57.420 Stat Controller: Registering login name IxLoad/S2/INBASDPC12364/Vinoy for aptixia default views
+*Debug 08/16 18:06:57.444 Stat Controller: Registering for PathResolutionEvent
+*Debug 08/16 18:06:57.446 Stat Controller: svCleanup() starts
+*Debug 08/16 18:06:57.447 Stat Controller: svCleanup() Entities count=1
+*Debug 08/16 18:06:57.523 Stat Controller: svCleanup() finishes
+*Debug 08/16 18:06:57.523 Test Controller : statWrapper_timeout = 1800
+*Debug 08/16 18:06:57.526 Test Controller : Creating the TestController FSM Thread
+*Debug 08/16 18:06:57.543 ixFSM: 
+  *** FSM Test Controller ENTERING STATE  TestController: UNCONFIGURED                     
+*Debug 08/16 18:06:57.543 Test Controller: getFSMEvent(): Thread FSM Object not created for this thread!
+*Debug 08/16 18:06:57.545 Test Controller: **********************************************************************************************
+*Debug 08/16 18:06:57.545 Test Controller:              PUBLISHING PRESTATE CHANGE EVENT       
+*Debug 08/16 18:06:57.545 Test Controller:  PUBLISHING STATE : [ TestController: UNCONFIGURED                    ]
+*Debug 08/16 18:06:57.545 Test Controller: **********************************************************************************************
+*Debug 08/16 18:06:57.585 Test Controller: Test Controller FSM: ENTRY Action for the State: UNCONFIGURED
+*Debug 08/16 18:06:57.586 Test Controller : TEST CONTROLLER: Clearing all Stat Plugins map.
+*Debug 08/16 18:06:57.586 Test Controller : clearStatPlugins(): Successfully CLEARED all the statistics plugins.
+*Debug 08/16 18:06:57.586 Test Controller : set resultFolderCreatedAtApplyConfig to False
+*Debug 08/16 18:06:57.586 Test Controller: Disconnecting from the stat-engine
+*Debug 08/16 18:06:57.595 Stat Controller: STAT CONTROLLER: disconnectFromAllSources()
+*Debug 08/16 18:06:57.595 Stat Controller: disconnectFromAllSources[764113456]: Disconnecting from []
+*Debug 08/16 18:06:57.595 Stat Controller: disconnectFromAllSources[764113456]: Done!
+*Debug 08/16 18:06:57.595 Stat Controller: Resetting stat threads
+*Debug 08/16 18:06:57.595 IxAnalyzer : Analyzer - Initialize()...
+*Debug 08/16 18:06:57.618 IxAnalyzer : Analyzer stub was created - Analyzer.CAnalyzerImpl
+*Debug 08/16 18:06:57.680 IxAnalyzer : Analyzer - Initialize() returned 0
+*Debug 08/16 18:06:57.681 IxAnalyzer : Analyzer - SetLiceseServer2(licenseServerName=', 'useExternalServer='True')...
+*Debug 08/16 18:06:57.683 IxAnalyzer : Analyzer - SetLiceseServer2 returned 0
+*Debug 08/16 18:06:57.683 IxAnalyzer : Analyzer - registering OnCaptureStatusChanged callback function for the capture view
+*Debug 08/16 18:06:57.684 IxAnalyzer : Analyzer - registering OnErrorNotification callback function for the capture view
+*Debug 08/16 18:06:57.684 IxAnalyzer : Analyzer - registering the callback functions succeeded
+*Debug 08/16 18:06:57.684 IxAnalyzer : Analyzer - Initialized successfully
+*Debug 08/16 18:06:57.686 IxAnalyzer : Analyzer - set test state - 0
+*Debug 08/16 18:06:57.707 ixEvent: Adding subscriber: <bound method ixTestController._callbackFsmAppStateName of <Lib.TestController.ixTestController.ixTestController object at 0x2D8B7110>> - im_self <Lib.TestController.ixTestController.ixTestController object at 0x2D8B7110>; im_func <function _callbackFsmAppStateName at 0x13C7EE30>
+*Debug 08/16 18:06:57.707 Test Controller: updateSubscribers() ixTestPreStateEvent(testName = Unknown, eventID= None, stateName =  TestController: UNCONFIGURED                    
+*Debug 08/16 18:06:57.707 Test Controller: updateSubscribers() ixTestStateEvent(testName = Unknown, eventID= None, stateName =  TestController: UNCONFIGURED                    
+*Debug 08/16 18:06:57.818 Stat Controller: Registering for StatRequestReadyEventHandler
+*Console 08/16 18:06:57.819 : self.__testController: <Lib.TestController.ixTestController.ixTestController object at 0x2D8B7110>
+*Console 08/16 18:06:57.819 : done
+*Info 08/16 18:06:57.819 Test Controller : Initializing Sdm Service. Searching for free port...
+*Warning 08/16 18:07:00.403 CalSdmService: SDM service listening port is now: 8051.
+*Debug 08/16 18:07:02.421 Test Controller : Test Controller Initialization Completed Successfully.
+*Debug 08/16 18:07:02.424 Test Controller: updateSubscribers() ixTestPreStateEvent(testName = Unknown, eventID= None, stateName =  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:02.426 Test Controller : ixRunStateHandler received event  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:02.426 Test Controller : ixRunStateHandler not running or cleaning. Exiting
+*Debug 08/16 18:07:02.426 Test Controller: updateSubscribers() ixTestStateEvent(testName = Unknown, eventID= None, stateName =  TestController: UNCONFIGURED                    
+*Console 08/16 18:07:02.427 : Initializing TCLApiTestController
+*Debug 08/16 18:07:02.427 Test Controller : releaseConfigWaitFinish: releasing configuration.
+*Debug 08/16 18:07:02.434 Stat Controller: svCleanup() starts
+*Debug 08/16 18:07:02.434 Stat Controller: svCleanup() Entities count=1
+*Debug 08/16 18:07:02.438 Stat Controller: svCleanup() finishes
+*Debug 08/16 18:07:02.440 Stat Controller: Api.clearStats() called. Watches = []
+*Debug 08/16 18:07:02.443 Stat Controller: Api.clearStats() called. Watches = [u'statcollectornetwork', u'statcollectorutils']
+*Debug 08/16 18:07:02.444 Stat Controller:   Api.clearStats removing stat watch statcollectornetwork
+*Debug 08/16 18:07:02.444 Stat Controller:   Api.clearStats removing stat watch statcollectorutils
+*Debug 08/16 18:07:02.444 Test: Clear gridStats
+*Debug 08/16 18:07:02.460 Stat Controller: Api.addStat: Adding Stat HTTP Requests Sent
+*Debug 08/16 18:07:02.460 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful
+*Debug 08/16 18:07:02.461 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (Provisional)
+*Debug 08/16 18:07:02.461 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed
+*Debug 08/16 18:07:02.463 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Write)
+*Debug 08/16 18:07:02.463 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Read)
+*Debug 08/16 18:07:02.463 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Bad Header)
+*Debug 08/16 18:07:02.463 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (4xx)
+*Debug 08/16 18:07:02.464 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (400)
+*Debug 08/16 18:07:02.464 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (401)
+*Debug 08/16 18:07:02.466 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (403)
+*Debug 08/16 18:07:02.466 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (404)
+*Debug 08/16 18:07:02.466 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (407)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (408)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (4xx other)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (5xx)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (505)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (5xx other)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (other)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Timeout)
+*Debug 08/16 18:07:02.467 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Aborted)
+*Debug 08/16 18:07:02.469 Stat Controller: Api.addStat: Adding Stat HTTP Aborted Before Request
+*Debug 08/16 18:07:02.469 Stat Controller: Api.addStat: Adding Stat HTTP Aborted After Request
+*Debug 08/16 18:07:02.469 Stat Controller: Api.addStat: Adding Stat HTTP Responses Received With Match
+*Debug 08/16 18:07:02.469 Stat Controller: Api.addStat: Adding Stat HTTP Responses Received Without Match
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Intermediate Responses Received (1xx)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (2xx)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (3xx)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (301)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (302)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (303)
+*Debug 08/16 18:07:02.470 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (307)
+*Debug 08/16 18:07:02.471 Stat Controller: Api.addStat: Adding Stat HTTP Content-MD5 Requests Sent
+*Debug 08/16 18:07:02.471 Stat Controller: Api.addStat: Adding Stat HTTP Chunk Encoded Headers Received
+*Debug 08/16 18:07:02.471 Stat Controller: Api.addStat: Adding Stat HTTP Chunk Encoded Responses Successful
+*Debug 08/16 18:07:02.471 Stat Controller: Api.addStat: Adding Stat HTTP Chunk Encoded Responses Failed
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Total Chunks Received
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Average Chunk Size
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Average Chunks per Response
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Chunk Encoded Requests Sent
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Total Chunks Sent
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Average Chunk Size in Request
+*Debug 08/16 18:07:02.473 Stat Controller: Api.addStat: Adding Stat HTTP Average Chunks per Request
+*Debug 08/16 18:07:02.474 Stat Controller: Api.addStat: Adding Stat Name1-Value1
+*Debug 08/16 18:07:02.474 Stat Controller: Api.addStat: Adding Stat Counter1
+*Debug 08/16 18:07:02.474 Stat Controller: Api.addStat: Adding Stat Name2-Value2
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Counter2
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Name3-Value3
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Counter3
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Name4-Value4
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Counter4
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Name5-Value5
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Counter5
+*Debug 08/16 18:07:02.476 Stat Controller: Api.addStat: Adding Stat Name6-Value6
+*Debug 08/16 18:07:02.477 Stat Controller: Api.addStat: Adding Stat Counter6
+*Debug 08/16 18:07:02.477 Stat Controller: Api.addStat: Adding Stat Name7-Value7
+*Debug 08/16 18:07:02.477 Stat Controller: Api.addStat: Adding Stat Counter7
+*Debug 08/16 18:07:02.477 Stat Controller: Api.addStat: Adding Stat Name8-Value8
+*Debug 08/16 18:07:02.477 Stat Controller: Api.addStat: Adding Stat Counter8
+*Debug 08/16 18:07:02.479 Stat Controller: Api.addStat: Adding Stat Name9-Value9
+*Debug 08/16 18:07:02.479 Stat Controller: Api.addStat: Adding Stat Counter9
+*Debug 08/16 18:07:02.479 Stat Controller: Api.addStat: Adding Stat Name10-Value10
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat Counter10
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Gzip-Encoded Responses Received
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Gzip-Encoded Responses Successful
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Gzip-Encoded Responses Failed
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Deflate-Encoded Responses Received
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Deflate-Encoded Responses Successful
+*Debug 08/16 18:07:02.480 Stat Controller: Api.addStat: Adding Stat HTTP Deflate-Encoded Responses Failed
+*Debug 08/16 18:07:02.482 Stat Controller: Api.addStat: Adding Stat HTTP Content-MD5 Responses Received
+*Debug 08/16 18:07:02.482 Stat Controller: Api.addStat: Adding Stat HTTP Content-MD5 Responses Successful
+*Debug 08/16 18:07:02.482 Stat Controller: Api.addStat: Adding Stat HTTP Content-MD5 Responses Failed
+*Debug 08/16 18:07:02.482 Stat Controller: Api.addStat: Adding Stat HTTP Custom MD5 Responses Received
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Custom MD5 Responses Successful
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Custom MD5 Responses Failed
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat Average Compression Ratio
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Simulated Users
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Concurrent Connections
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Connections
+*Debug 08/16 18:07:02.483 Stat Controller: Api.addStat: Adding Stat HTTP Connection Attempts
+*Debug 08/16 18:07:02.484 Stat Controller: Api.addStat: Adding Stat HTTP Connection Aborts
+*Debug 08/16 18:07:02.484 Stat Controller: Api.addStat: Adding Stat HTTP Old Session Aborts
+*Debug 08/16 18:07:02.484 Stat Controller: Api.addStat: Adding Stat HTTP Transactions
+*Debug 08/16 18:07:02.484 Stat Controller: Api.addStat: Adding Stat HTTP Bytes
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Sent
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (Provisional)
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Intermediate Responses Received (1xx)
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (2xx)
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (3xx)
+*Debug 08/16 18:07:02.486 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (301)
+*Debug 08/16 18:07:02.487 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (302)
+*Debug 08/16 18:07:02.487 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (303)
+*Debug 08/16 18:07:02.487 Stat Controller: Api.addStat: Adding Stat HTTP Requests Successful (307)
+*Debug 08/16 18:07:02.487 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed
+*Debug 08/16 18:07:02.489 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Write)
+*Debug 08/16 18:07:02.489 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Read)
+*Debug 08/16 18:07:02.489 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Bad Header)
+*Debug 08/16 18:07:02.489 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (4xx)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (400)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (401)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (403)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (404)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (407)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (408)
+*Debug 08/16 18:07:02.490 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (4xx other)
+*Debug 08/16 18:07:02.492 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (5xx)
+*Debug 08/16 18:07:02.492 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (505)
+*Debug 08/16 18:07:02.492 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (5xx other)
+*Debug 08/16 18:07:02.492 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (other)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Timeout)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Requests Failed (Aborted)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Session Timeouts (408)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Request Precondition Failed (412)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Sessions Rejected (503)
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Aborted Before Request
+*Debug 08/16 18:07:02.493 Stat Controller: Api.addStat: Adding Stat HTTP Aborted After Request
+*Debug 08/16 18:07:02.494 Stat Controller: Api.addStat: Adding Stat HTTP Transactions Active
+*Debug 08/16 18:07:02.494 Stat Controller: Api.addStat: Adding Stat HTTP Users Active
+*Debug 08/16 18:07:02.494 Stat Controller: Api.addStat: Adding Stat Content-Encoded Responses Received
+*Debug 08/16 18:07:02.494 Stat Controller: Api.addStat: Adding Stat Gzip Content-Encoding Received
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Deflate Content-Encoding Received
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Unrecognized Content-Encoding Received
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Content-Encoded Responses Decode Successful
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Gzip Content-Encoding Decode Successful
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Deflate Content-Encoding Decode Successful
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Content-Encoded Responses Decode Failed
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Gzip Content-Encoding Decode Failed
+*Debug 08/16 18:07:02.496 Stat Controller: Api.addStat: Adding Stat Deflate Content-Encoding Decode Failed
+*Debug 08/16 18:07:02.497 Stat Controller: Api.addStat: Adding Stat Gzip Content-Encoding Decode Failed - Data Error
+*Debug 08/16 18:07:02.497 Stat Controller: Api.addStat: Adding Stat Gzip Content-Encoding Decode Failed - Decoding Error
+*Debug 08/16 18:07:02.497 Stat Controller: Api.addStat: Adding Stat Deflate Content-Encoding Decode Failed - Data Error
+*Debug 08/16 18:07:02.497 Stat Controller: Api.addStat: Adding Stat Deflate Content-Encoding Decode Failed - Decoding Error
+*Debug 08/16 18:07:02.499 Stat Controller: Api.addStat: Adding Stat Chunked Transfer-Encoded Headers Received
+*Debug 08/16 18:07:02.499 Stat Controller: Api.addStat: Adding Stat Chunked Transfer-Encoding Decode Successful
+*Debug 08/16 18:07:02.499 Stat Controller: Api.addStat: Adding Stat Chunked Transfer-Encoding Decode Failed
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Total Chunks Received
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Chunked Transfer-Encoding Headers Sent
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Total Chunks Sent
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Content-MD5 Responses Received
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Content-MD5 Check Successful
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Content-MD5 Check Failed
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Custom-MD5 Responses Received
+*Debug 08/16 18:07:02.500 Stat Controller: Api.addStat: Adding Stat Custom-MD5 Check Successful
+*Debug 08/16 18:07:02.502 Stat Controller: Api.addStat: Adding Stat Custom-MD5 Check Failed
+*Debug 08/16 18:07:02.502 Stat Controller: Api.addStat: Adding Stat HTTP Bytes Sent
+*Debug 08/16 18:07:02.502 Stat Controller: Api.addStat: Adding Stat HTTP Bytes Received
+*Debug 08/16 18:07:02.502 Stat Controller: Api.addStat: Adding Stat HTTP Content Bytes Sent
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Content Bytes Received
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Decompressed Content Bytes Received
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Received
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Sent
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Rejected
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Rejected - (Path Match Failed)
+*Debug 08/16 18:07:02.503 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Rejected - (Domain Match Failed)
+*Debug 08/16 18:07:02.505 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Rejected - (Cookiejar Overflow)
+*Debug 08/16 18:07:02.505 Stat Controller: Api.addStat: Adding Stat HTTP Cookies Rejected - (Probabilistic Reject)
+*Debug 08/16 18:07:02.505 Stat Controller: Api.addStat: Adding Stat HTTP Cookie headers Rejected - (Memory Overflow)
+*Debug 08/16 18:07:02.505 Stat Controller: Api.addStat: Adding Stat HTTP Connect Time (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Time To First Byte (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Time To Last Byte (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Old Session Abort Delay - Average (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Old Session Abort Delay - Minimum (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Old Session Abort Delay - Maximum (us)
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Client Total Data Integrity Check Failed
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Client Total Data Integrity Check Succeeded
+*Debug 08/16 18:07:02.506 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Data Frames Received
+*Debug 08/16 18:07:02.507 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Header Frames Received
+*Debug 08/16 18:07:02.507 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Priority Frames Received
+*Debug 08/16 18:07:02.507 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Reset Stream Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Settings Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Push Promise Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Ping Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Go Away Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Window Update Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Continuation Frames Received
+*Debug 08/16 18:07:02.509 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Data Frames Sent
+*Debug 08/16 18:07:02.510 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Header Frames Sent
+*Debug 08/16 18:07:02.510 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Priority Frames Sent
+*Debug 08/16 18:07:02.510 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Reset Stream Frames Sent
+*Debug 08/16 18:07:02.512 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Settings Frames Sent
+*Debug 08/16 18:07:02.512 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Push Promise Frames Sent
+*Debug 08/16 18:07:02.512 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Ping Frames Sent
+*Debug 08/16 18:07:02.512 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Go Away Frames Sent
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Window Update Frames Sent
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Continuation Frames Sent
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Initiated by Client
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Initiated by Server
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Succeeded (Client to Server)
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Succeeded (Server to Client)
+*Debug 08/16 18:07:02.513 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Failed (Client to Server)
+*Debug 08/16 18:07:02.515 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Streams Failed (Server to Client)
+*Debug 08/16 18:07:02.515 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Connection Upgrade Succeeded
+*Debug 08/16 18:07:02.515 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Connection Upgrade Failed
+*Debug 08/16 18:07:02.515 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Protocol Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Internal Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Flow Control Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Settings Timeout Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Stream Closed Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Frame Size Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Refused Stream Error
+*Debug 08/16 18:07:02.516 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Stream Cancelled Error
+*Debug 08/16 18:07:02.517 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Compression Error
+*Debug 08/16 18:07:02.517 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Connect Error
+*Debug 08/16 18:07:02.517 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Enhance Calm Error
+*Debug 08/16 18:07:02.517 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 Inadequate Security Error
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat HTTP Client HTTP2.0 HTTP1_1 Required Error
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (close_notify)
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (close_notify)
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (unexpected_message)
+*Debug 08/16 18:07:02.519 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (unexpected_message)
+*Debug 08/16 18:07:02.520 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (bad_record_mac)
+*Debug 08/16 18:07:02.520 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (bad_record_mac)
+*Debug 08/16 18:07:02.520 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (decryption_failed)
+*Debug 08/16 18:07:02.520 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (decryption_failed)
+*Debug 08/16 18:07:02.522 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (record_overflow)
+*Debug 08/16 18:07:02.522 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (record_overflow)
+*Debug 08/16 18:07:02.522 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (decompression_failure)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (decompression_failure)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (handshake_failure)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (handshake_failure)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (no_certificate)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (no_certificate)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (bad_certificate)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (bad_certificate)
+*Debug 08/16 18:07:02.523 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (unsupported_certificate)
+*Debug 08/16 18:07:02.525 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (unsupported_certificate)
+*Debug 08/16 18:07:02.525 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (certificate_revoked)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (certificate_revoked)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (certificate_expired)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (certificate_expired)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (certificate_unknown)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (certificate_unknown)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (illegal_parameter)
+*Debug 08/16 18:07:02.526 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (illegal_parameter)
+*Debug 08/16 18:07:02.528 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (unknown_ca)
+*Debug 08/16 18:07:02.528 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (unknown_ca)
+*Debug 08/16 18:07:02.528 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (access_denied)
+*Debug 08/16 18:07:02.528 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (access_denied)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (decode_error)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (decode_error)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (decrypt_error)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (decrypt_error)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (export_restriction)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (export_restriction)
+*Debug 08/16 18:07:02.529 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (protocol_version)
+*Debug 08/16 18:07:02.530 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (protocol_version)
+*Debug 08/16 18:07:02.530 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (insufficient_security)
+*Debug 08/16 18:07:02.530 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (insufficient_security)
+*Debug 08/16 18:07:02.530 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (internal_error)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (internal_error)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (user_canceled)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (user_canceled)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (no_renegotiation)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Alerts Sent (no_renegotiation)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Errors Received (undefined error)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent (undefined error)
+*Debug 08/16 18:07:02.532 Stat Controller: Api.addStat: Adding Stat SSL Errors Received (no cipher)
+*Debug 08/16 18:07:02.533 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent (no cipher)
+*Debug 08/16 18:07:02.533 Stat Controller: Api.addStat: Adding Stat SSL Errors Received (no certificate)
+*Debug 08/16 18:07:02.533 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent (no certificate)
+*Debug 08/16 18:07:02.535 Stat Controller: Api.addStat: Adding Stat SSL Errors Received (bad certificate)
+*Debug 08/16 18:07:02.535 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent (bad certificate)
+*Debug 08/16 18:07:02.535 Stat Controller: Api.addStat: Adding Stat SSL Errors Received (unsupported certificate)
+*Debug 08/16 18:07:02.535 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent (unsupported certificate)
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat SSL Errors Received
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat SSL Errors Sent
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Client Hello Sent
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Client Hello Received
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Server Hello Sent
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Server Hello Received
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Hello Requests Sent
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat Hello Requests Received
+*Debug 08/16 18:07:02.536 Stat Controller: Api.addStat: Adding Stat SSL Session Reuse Success
+*Debug 08/16 18:07:02.538 Stat Controller: Api.addStat: Adding Stat SSL Session Reuse Failed
+*Debug 08/16 18:07:02.538 Stat Controller: Api.addStat: Adding Stat SSL Concurrent Sessions
+*Debug 08/16 18:07:02.538 Stat Controller: Api.addStat: Adding Stat SSL Bytes Sent
+*Debug 08/16 18:07:02.538 Stat Controller: Api.addStat: Adding Stat SSL Bytes Received
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Throughput Bytes
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Application Data Bytes
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Certificate Validation Failure
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Certificate Self Signed
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Certificate CA Signed
+*Debug 08/16 18:07:02.539 Stat Controller: Api.addStat: Adding Stat SSL Alerts Received (unrecognized name)
+*Debug 08/16 18:07:02.540 Stat Controller: Api.addStat: Adding Stat SSL SNI extension sent successfully
+*Debug 08/16 18:07:02.540 Stat Controller: Api.addStat: Adding Stat SSL SNI extension mismatch
+*Debug 08/16 18:07:02.540 Stat Controller: Api.addStat: Adding Stat SSL session ticket reuse success
+*Debug 08/16 18:07:02.540 Stat Controller: Api.addStat: Adding Stat SSL session ticket reuse failure
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat SSL Negotiation Finished Successfully
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP SYN Sent
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP SYN_SYN-ACK Received
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP SYN Failed
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP SYN-ACK Sent
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP Connection Requests Failed
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP Connections Established
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP FIN Sent
+*Debug 08/16 18:07:02.542 Stat Controller: Api.addStat: Adding Stat TCP FIN Received
+*Debug 08/16 18:07:02.543 Stat Controller: Api.addStat: Adding Stat TCP FIN-ACK Sent
+*Debug 08/16 18:07:02.543 Stat Controller: Api.addStat: Adding Stat TCP FIN-ACK Received
+*Debug 08/16 18:07:02.543 Stat Controller: Api.addStat: Adding Stat TCP Resets Sent
+*Debug 08/16 18:07:02.543 Stat Controller: Api.addStat: Adding Stat TCP Resets Received
+*Debug 08/16 18:07:02.545 Stat Controller: Api.addStat: Adding Stat TCP Retries
+*Debug 08/16 18:07:02.545 Stat Controller: Api.addStat: Adding Stat TCP Timeouts
+*Debug 08/16 18:07:02.545 Stat Controller: Api.addStat: Adding Stat TCP Accept Queue Entries
+*Debug 08/16 18:07:02.545 Stat Controller: Api.addStat: Adding Stat TCP Listen Queue Drops
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in ESTABLISHED State
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in SYN-SENT State
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in SYN-RECEIVED State
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in FIN-WAIT-1 State
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in FIN-WAIT-2 State
+*Debug 08/16 18:07:02.546 Stat Controller: Api.addStat: Adding Stat TCP Connections in TIME-WAIT State
+*Debug 08/16 18:07:02.548 Stat Controller: Api.addStat: Adding Stat TCP Connections in CLOSE STATE
+*Debug 08/16 18:07:02.548 Stat Controller: Api.addStat: Adding Stat TCP Connections in CLOSE-WAIT State
+*Debug 08/16 18:07:02.548 Stat Controller: Api.addStat: Adding Stat TCP Connections in LAST-ACK State
+*Debug 08/16 18:07:02.548 Stat Controller: Api.addStat: Adding Stat TCP Connections in LISTENING State
+*Debug 08/16 18:07:02.549 Stat Controller: Api.addStat: Adding Stat TCP Connections in CLOSING State
+*Debug 08/16 18:07:02.549 Stat Controller: Api.addStat: Adding Stat TCP Internally Aborted Connections
+*Debug 08/16 18:07:02.605 Test Controller : WARNING: The repository object is EMPTY.
+*Debug 08/16 18:07:02.618 Test Controller : WARNING: The repository object is EMPTY.
+*Debug 08/16 18:07:02.627 Test Controller : Uploading tcl code to tcl interpreter for test event callbacks
+*Debug 08/16 18:07:02.628 POP3_Client.Pop3Command: Command list upgraded!
+*Console 08/16 18:07:02.630 : SYNC: Network1 @ Wed Aug 16 18:07:02 2017 - duration - 0.00100016593933
+*Debug 08/16 18:07:02.631 Test Controller : @@@run: doing start run...
+*Debug 08/16 18:07:02.637 Test Controller : ##### ChassisChain synced: True
+*Debug 08/16 18:07:02.637 Test Controller: testName = Test1 ; stateName =  TestController: UNCONFIGURED                    ; eventId =  TestController: Start the Run ; errDescription = None ; details = None; status = None
+*Debug 08/16 18:07:02.638 Test Controller : @@@run:  using ::ixTestControllerMonitor as monitor variable
+*Debug 08/16 18:07:02.726 Test Controller: Fetching the next event from the queue
+*Debug 08/16 18:07:02.726 Test Controller: event ID received =  TestController: Start the Run
+*Debug 08/16 18:07:02.726 ixFSM:   *** FSM Test Controller: --EVENT RECEIVED--:  TestController: Start the Run
+*Warning 08/16 18:07:02.729 Advanced Timeline : The last segment of timeline Timeline1 does not start and end at 0 - some users might be pending when test stops
+*Debug 08/16 18:07:02.792 ixFSM:   *** FSM Test Controller --EVENT PROCESSED--:  TestController: Start the Run
+*Debug 08/16 18:07:02.792 ixFSM:   *** FSM Test Controller --EXITING STATE--:  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:02.792 ixFSM:   *** FSM Test Controller --ENTERING STATE--:  TestController: CONFIG INIT                     
+*Debug 08/16 18:07:02.792 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:02.792 Test Controller:              PUBLISHING PRESTATE CHANGE EVENT       
+*Debug 08/16 18:07:02.792 Test Controller:  PUBLISHING STATE : [ TestController: CONFIG INIT                     ]
+*Debug 08/16 18:07:02.792 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:02.793 Test Controller : ixRunStateHandler received event  TestController: CONFIG INIT                     
+*Debug 08/16 18:07:02.821 Test Controller: Test Controller FSM: ENTRY Action for the State: CONFIG INIT
+*Debug 08/16 18:07:02.822 IxAnalyzer : Analyzer - set test state - 1
+*Debug 08/16 18:07:02.822 Test Controller : set resultFolderCreatedAtApplyConfig to False
+*Debug 08/16 18:07:02.822 Test Controller : SM Cancel being invoked
+*Debug 08/16 18:07:02.825 Test Controller : SM Cancel completed
+*Debug 08/16 18:07:02.828 Test Controller: testName = Test1 ; stateName =  TestController: CONFIG INIT                     ; eventId =  TestController: Check Config ; errDescription = None ; details = None; status = None
+*Debug 08/16 18:07:02.848 Test Controller: ***********************PUBLISHING STATE CHANGE EVENT***********************
+  PUBLISHER MODULE: Test Controller, TEST NAME: Test1, PREV STATE: 'TestController: UNCONFIGURED', EVENT RECEIVED:  TestController: Start the Run
+  NEW STATE: 'TestController: CONFIG INIT', DESCRIPTION: None, DETAILS: None, STATUS: None
+*Debug 08/16 18:07:02.848 Test Controller: Fetching the next event from the queue
+*Debug 08/16 18:07:02.848 Test Controller: event ID received =  TestController: Check Config
+*Debug 08/16 18:07:02.848 ixFSM:   *** FSM Test Controller: --EVENT RECEIVED--:  TestController: Check Config
+*Debug 08/16 18:07:02.849 Test Server: IP Overlapping Disabled
+*Debug 08/16 18:07:02.859 Test: dest [10.72.2.3] not in destinations[[]]
+*Debug 08/16 18:07:02.859 Test: DESTINATION IP ADDRESS IDENTIFIED - dest = 10.72.2.3 port = 80
+*Debug 08/16 18:07:02.859 Test: dest [10.72.2.3] not in destinations[[]]
+*Debug 08/16 18:07:02.859 Test: DESTINATION IP ADDRESS IDENTIFIED - dest = 10.72.2.3 port = 80
+*Debug 08/16 18:07:02.861 NetTraffic Traffic1@Network1: isAnyPortCaptureEnabled() for Traffic1@Network1 returning False
+*Debug 08/16 18:07:02.861 NetTraffic Traffic1@Network1: isCommunityCaptureEnabled() for Traffic1@Network1 returning False
+*Debug 08/16 18:07:02.871 Traffic Traffic1: Traffic Traffic1 Agent HTTPClient1 global featureDict = {0: 1, 1: 0, 2: 1, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1, 9: 1, 10: 0, 11: 0, 12: 1, 15: 1, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 1, 25: 0, 26: -1, 27: 0}
+*Debug 08/16 18:07:02.871 Traffic Traffic1: Traffic Traffic1 before reviseNetTrafficFeatures aggregatedFeatures = {0: 1, 1: 0, 2: 1, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1, 9: 1, 10: 0, 11: 0, 12: 1, 13: 0, 14: 0, 15: 1, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 1, 24: 0, 25: 0, 26: -1, 27: 0}
+*Debug 08/16 18:07:02.877 Network Network1: ************ Not Multicore; Returning False; **************
+*Debug 08/16 18:07:02.877 NetTraffic Traffic1@Network1: ************ Conditional View Enable; Returning False; **************
+*Debug 08/16 18:07:02.878 NetTraffic Traffic1@Network1: isConditionalViewSupported result=True self.name=Traffic1@Network1 isConditionalViewPerUser=True agentsRequest=True
+*Debug 08/16 18:07:02.878 NetTraffic Traffic1@Network1: fastTcpStack
+*Debug 08/16 18:07:02.878 Traffic Traffic1: Traffic Traffic1 after reviseNetTrafficFeatures aggregatedFeatures = {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 1, 9: 1, 10: 0, 11: 0, 12: 1, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 1, 24: 0, 25: 0, 26: -1, 27: 0}
+*Debug 08/16 18:07:02.880 Network Network1: Port(s) [(1,1,9)] in network Network1 do not support L7 mode)
+*Debug 08/16 18:07:02.923 *PCU*: Network1: Traffic1: Memory required for network is 267168 for 1 interfaces: SM memory of 267168, Kse memory of 0, IPv4 agent specific mem 0, IPv6 agent specific mem 0
+*Debug 08/16 18:07:02.924 Traffic Traffic1: Available memory from card 2060409956.
+*Debug 08/16 18:07:02.924 NetTraffic Traffic1@Network1: isConditionalViewSupported result=False self.name=Traffic1@Network1 isConditionalViewPerUser=True agentsRequest=False
+*Debug 08/16 18:07:02.924 Traffic Traffic1: Traffic1@Network1: Available free memory for card Xcellon-Ultra NP, of chassis 192.168.31.42 being used in computation is 2057523670 bytes [Extra Mem = 2886286, Attachment Size = 0, conditional Stats = 0, playlist file size = 0.]
+*Debug 08/16 18:07:02.924 NetTraffic Traffic1@Network1: isAnyPortCaptureEnabled() for Traffic1@Network1 returning False
+*Debug 08/16 18:07:02.924 *PCU*: Traffic1@Network1: Available free memory for card Xcellon-Ultra NP, of chassis 192.168.31.42 being used in computation is 2057523670 bytes [Extra Mem = 2886286, Attachment Size = 0, conditional Stats = 0, playlist file size = 0.]
+*Debug 08/16 18:07:02.924 *PCU*: Traffic1@Network1: Effective available memory for network and activities is 2057523670, after deducting ixView memory of 0.
+*Debug 08/16 18:07:02.926 Network Network1: Setting activity id for community Traffic1@Network1
+*Debug 08/16 18:07:02.926 Network Range Network Range IP-R1 in Network1 (10.53.173.151+1): Adding flow HTTPClient1 with RuntimeId 0 to activityIdList
+*Debug 08/16 18:07:02.927 Traffic Traffic1: agent HTTP requires advancedFeatures: []
+*Debug 08/16 18:07:02.931 NetTraffic Traffic1@Network1: Max allowed activities is 16
+*Warning 08/16 18:07:02.934 NetTraffic Traffic1@Network1: The number of Simulated Users configured (20000) is greater than the total IPv4 Pool Size (1) for activity 'HTTPClient1' in Client Traffic-Network Mapping 'Traffic1@Network1'. Some users will use the same addresses as others.
+*Debug 08/16 18:07:02.937 Traffic Traffic1: Available memory from card 2060409956.
+*Debug 08/16 18:07:02.937 NetTraffic Traffic1@Network1: isConditionalViewSupported result=False self.name=Traffic1@Network1 isConditionalViewPerUser=True agentsRequest=False
+*Debug 08/16 18:07:02.937 Traffic Traffic1: Traffic1@Network1: Available free memory for card Xcellon-Ultra NP, of chassis 192.168.31.42 being used in computation is 2057523670 bytes [Extra Mem = 2886286, Attachment Size = 0, conditional Stats = 0, playlist file size = 0.]
+*Debug 08/16 18:07:02.937 NetTraffic Traffic1@Network1: isAnyPortCaptureEnabled() for Traffic1@Network1 returning False
+*Debug 08/16 18:07:02.937 *PCU*: Traffic1@Network1: Available free memory for card Xcellon-Ultra NP, of chassis 192.168.31.42 being used in computation is 2057523670 bytes [Extra Mem = 2886286, Attachment Size = 0, conditional Stats = 0, playlist file size = 0.]
+*Debug 08/16 18:07:02.937 *PCU*: Traffic1@Network1: Effective available memory for network and activities is 2057523670, after deducting ixView memory of 0.
+*Debug 08/16 18:07:02.938 *PCU*: Traffic1@Network1: HTTPClient1: Ports Required CALC:
+                                     TCP Ports requirement:
+                                     UsersPerIP: 0 UsersPerPort: 0 TcpPortsPerUser: 3 Ports required = 0.000000
+*Debug 08/16 18:07:02.938 *PCU*: Traffic1@Network1: HTTPClient1: Ports Required CALC:
+                                   UDP Ports requirement:
+                                   UsersPerIP: 0 UsersPerPort: 0 UdpPortsPerUser: 0 Ports required = 0.000000
+*Debug 08/16 18:07:02.938 *PCU*: Traffic1@Network1: HTTPClient1: Ports required for memory 0.0554025218091, tcp/udp dominance 0
+*Debug 08/16 18:07:02.953 *PCU*: Network1: Traffic1: Memory required for network is 267168 for 1 interfaces: SM memory of 267168, Kse memory of 0, IPv4 agent specific mem 0, IPv6 agent specific mem 0
+*Debug 08/16 18:07:02.957 *PCU*: Traffic1@Network1: HTTPClient1: Objective Performance is 0.0 for objective simulatedUsers cardFamily acceleron-np configId IxStack:
+*Debug 08/16 18:07:02.957 *PCU*: Traffic1@Network1: HTTPClient1: Ports requirement for agent specified max is 0, objectiveValue 20000, maxObjectiveFromObjectivePerformance 0.0, usingMaxAllowedObjective 0,
+*Warning 08/16 18:07:02.960 Advanced Timeline : The last segment of timeline Timeline1 does not start and end at 0 - some users might be pending when test stops
+*Debug 08/16 18:07:02.963 Test: buildDefaultStatViewList() CSV logging is Enabled.
+*Debug 08/16 18:07:02.963 Test: @ Building default StatView list...
+*Debug 08/16 18:07:02.963 Test: @ Building activity HTTPClient1 StatView list...
+*Debug 08/16 18:07:02.973 Test: @ Building Protocol CSV Views...
+*Debug 08/16 18:07:02.973 Test: buildDefaultPerProtocolStats()
+*Debug 08/16 18:07:02.973 Test: Building CSV view for protocol = HTTP, role = Client...
+*Debug 08/16 18:07:02.976 Test: Using longest activity HTTPClient1 for creating view for protocol = HTTP, role = Client 
+*Debug 08/16 18:07:02.976 Test: @ Building Test CSV Views...
+*Debug 08/16 18:07:02.976 Test: buildDefaultTestStats()
+*Debug 08/16 18:07:02.976 Test: @ Building CSV view for test Client...
+*Debug 08/16 18:07:02.977 Test: using longest activity HTTPClient1 for creating view for type = Client 
+*Debug 08/16 18:07:02.979 Test: @ Building Run State Views...
+*Debug 08/16 18:07:03.15 Test: asmXmvAllPortDict={0: [(1,1,9)]}
+*Debug 08/16 18:07:03.15 Test Controller: testName = Test1 ; stateName =  TestController: CONFIG INIT                     ; eventId =  TestController: RebootPorts ; errDescription = None ; details = None; status = None
+*Debug 08/16 18:07:03.16 ixFSM:   *** FSM Test Controller --EVENT PROCESSED--:  TestController: Check Config
+*Debug 08/16 18:07:03.16 ixFSM:   *** FSM Test Controller --INTERNAL EVENT. STAYING IN STATE--:  TestController: CONFIG INIT                     
+*Debug 08/16 18:07:03.16 Test Controller: Fetching the next event from the queue
+*Debug 08/16 18:07:03.16 Test Controller: event ID received =  TestController: RebootPorts
+*Debug 08/16 18:07:03.16 ixFSM:   *** FSM Test Controller: --EVENT RECEIVED--:  TestController: RebootPorts
+*Debug 08/16 18:07:03.16 Test Controller : TEST CONTROLLER: setupCommunityControllers()
+*Debug 08/16 18:07:03.16 Test Controller : Creating NEW COMMUNITY CONTROLLER : Traffic1@Network1
+*Console 08/16 18:07:03.16 : ixPortController for card (1,1) reports isMultiNic = False
+*Debug 08/16 18:07:03.38 Network: Unregistered PortGroup or non-PG object changed!
+*Debug 08/16 18:07:03.48 ixFSM: 
+  *** FSM Community Controller Traffic1@Network1 ENTERING STATE  Community Controller: INIT CONFIG           
+*Debug 08/16 18:07:03.48 Community Controller Traffic1@Network1: Community Controller FSM: ENTRY Action for the State: INIT CONFIG  :: Traffic1@Network1 
+*Debug 08/16 18:07:03.48 Community Controller: Clearing cache on Traffic1@Network1
+*Debug 08/16 18:07:03.48 Community Controller: Community cache cleared on Traffic1@Network1 .
+*Debug 08/16 18:07:03.49 Test Controller : <Community Controller thread started> Traffic1@Network1
+*Debug 08/16 18:07:03.49 Test Controller : Following communities have been successfully added to the list.
+*Debug 08/16 18:07:03.51 Test Controller : Community Controller = Traffic1@Network1
+*Debug 08/16 18:07:03.51 Test Controller: setUserStopRunFlag is False
+*Debug 08/16 18:07:03.51 Test Controller : The port list for the active test.
+*Debug 08/16 18:07:03.51 Community Controller: Initialize the Port List for the community : Traffic1@Network1
+*Debug 08/16 18:07:03.51 Community Controller: Ports : [(1,1,9)]
+*Debug 08/16 18:07:03.85 Test Controller: Total number of Ports for this test are: 1
+*Debug 08/16 18:07:03.86 Event Scheduler: addEvent() Function. interval = 0, action = <bound method ixTestControllerFSMThread._configuringTimerExpired of <ixTestControllerFSMThread(Test Controller, started daemon 9244)>>, actionArguments=(()), iteration=0, startDelay=2400 and Timer Index = 1
+*Debug 08/16 18:07:03.88 Event Scheduler: EVENT ADDED to the events map. Timer Index=1
+*Debug 08/16 18:07:03.88 Test Controller: [ Configuring Watch Dog Timer created. ] Timer ID = 1 
+*Debug 08/16 18:07:03.88 Test Controller: [ Configured timeout interval = 0 s, start delay = 2400 s. ]
+*Debug 08/16 18:07:03.88 Test Controller: Total number of communities for this test: 1
+*Debug 08/16 18:07:03.88 Network: ##### Removing port from portList (1,1,9)
+*Debug 08/16 18:07:03.88 Chassis Chain: Taking ownership on [[1, 1, 9]].
+*Debug 08/16 18:07:03.115 Test Controller: testName = Test1 ; stateName =  TestController: CONFIG INIT                     ; eventId =  TestController ERROR: Configuration Initialization Failed ; errDescription = Failed to take ownership on ports [[1, 1, 9]]. Please use the "Clear Ownership and Reboot Ports" option or use "Forcefully Take Ownership" option ; details = None; status = 1
+*Debug 08/16 18:07:03.115 Test Controller : set resultFolderCreatedAtApplyConfig to False
+*Error 08/16 18:07:03.115 Test Controller: Failed to take ownership on ports [[1, 1, 9]]. Please use the "Clear Ownership and Reboot Ports" option or use "Forcefully Take Ownership" option
+*Debug 08/16 18:07:03.117 ixFSM:   *** FSM Test Controller --EVENT PROCESSED--:  TestController: RebootPorts
+*Debug 08/16 18:07:03.118 ixFSM:   *** FSM Test Controller --INTERNAL EVENT. STAYING IN STATE--:  TestController: CONFIG INIT                     
+*Debug 08/16 18:07:03.118 Test Controller: Fetching the next event from the queue
+*Debug 08/16 18:07:03.118 Test Controller: event ID received =  TestController ERROR: Configuration Initialization Failed
+*Debug 08/16 18:07:03.118 ixFSM:   *** FSM Test Controller: --EVENT RECEIVED--:  TestController ERROR: Configuration Initialization Failed
+*Debug 08/16 18:07:03.118 Test Controller: _cleanUp() API called
+*Debug 08/16 18:07:03.118 Test Controller: [ Stopping the Configuring Watch Dog Timer. ] Timer ID = 1
+*Debug 08/16 18:07:03.118 Event Scheduler: REMOVE Event(). Removing Event Index 1
+*Debug 08/16 18:07:03.118 Event Scheduler: Stopping the timer: Event Index 1, timer (1502889423.088, 0, <bound method ixEventScheduler.callback of <Lib.Common.ixEventScheduler.ixEventScheduler object at 0x2D8B71D0>>, (1,))
+*Debug 08/16 18:07:03.118 Event Scheduler: deleting the event 1
+*Debug 08/16 18:07:03.118 Test Controller : Shutting down the existing Community Controller: Traffic1@Network1 
+*Debug 08/16 18:07:03.118 Community Controller: Shutting down communityController for community Traffic1@Network1
+*Debug 08/16 18:07:03.119 [Traffic1@Network1] Port Controller: Flushing 0 sockets
+*Debug 08/16 18:07:03.119 [Traffic1@Network1] Port Controller: Flush: 0 iterations
+*Debug 08/16 18:07:03.160 Community Controller: Resetting the community : Traffic1@Network1
+*Info 08/16 18:07:03.160 Test Controller: Tearing down all network interfaces started...
+*Info 08/16 18:07:03.184 Test Controller: Tearing down all interfaces completed...
+*Debug 08/16 18:07:03.186 Test Controller: Configuration failed.
+*Debug 08/16 18:07:03.207 Test Controller: Test Controller FSM: EXIT Action for the State: CONFIG INIT
+*Debug 08/16 18:07:03.227 ixFSM:   *** FSM Test Controller --EVENT PROCESSED--:  TestController ERROR: Configuration Initialization Failed
+*Debug 08/16 18:07:03.227 ixFSM:   *** FSM Test Controller --EXITING STATE--:  TestController: CONFIG INIT                     
+*Debug 08/16 18:07:03.227 ixFSM:   *** FSM Test Controller --ENTERING STATE--:  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:03.227 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:03.227 Test Controller:              PUBLISHING PRESTATE CHANGE EVENT       
+*Debug 08/16 18:07:03.227 Test Controller:  PUBLISHING STATE : [ TestController: UNCONFIGURED                    ]
+*Debug 08/16 18:07:03.227 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:03.229 Test Controller : ixRunStateHandler received event  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:03.230 Test Controller : calling ::IxLoad eval {set ::ixCaptureMonitor {eventType CAPTURE_STOPPED status OK}}
+*Debug 08/16 18:07:03.230 Test Controller : calling ::IxLoad eval {::IxLoadPrivate::default_event_callback {eventType TEST_STOPPED status ERROR description {1} message {Failed to take ownership on ports [[1, 1, 9]]. Please use the "Clear Ownership and Reboot Ports" option or use "Forcefully Take Ownership" option}}}
+*Debug 08/16 18:07:03.253 Test Controller: Test Controller FSM: ENTRY Action for the State: UNCONFIGURED
+*Debug 08/16 18:07:03.253 Test Controller : TEST CONTROLLER: Clearing all Stat Plugins map.
+*Debug 08/16 18:07:03.253 Test Controller : clearStatPlugins(): Successfully CLEARED all the statistics plugins.
+*Debug 08/16 18:07:03.253 Test Controller : set resultFolderCreatedAtApplyConfig to False
+*Debug 08/16 18:07:03.253 Test Controller: Disconnecting from the stat-engine
+*Debug 08/16 18:07:03.256 Stat Controller: STAT CONTROLLER: disconnectFromAllSources()
+*Debug 08/16 18:07:03.256 Stat Controller: disconnectFromAllSources[764113456]: Disconnecting from []
+*Debug 08/16 18:07:03.256 Stat Controller: disconnectFromAllSources[764113456]: Done!
+*Debug 08/16 18:07:03.256 Stat Controller: Resetting stat threads
+*Debug 08/16 18:07:03.257 IxAnalyzer : Analyzer - set test state - 0
+*Debug 08/16 18:07:03.276 Test Controller: ***********************PUBLISHING STATE CHANGE EVENT***********************
+  PUBLISHER MODULE: Test Controller, TEST NAME: Test1, PREV STATE: 'TestController: CONFIG INIT', EVENT RECEIVED:  TestController ERROR: Configuration Initialization Failed
+  NEW STATE: 'TestController: UNCONFIGURED', DESCRIPTION: Failed to take ownership on ports [[1, 1, 9]]. Please use the "Clear Ownership and Reboot Ports" option or use "Forcefully Take Ownership" option, DETAILS: None, STATUS: 1
+*Debug 08/16 18:07:03.641 Test Controller: testName = Test1 ; stateName =  TestController: UNCONFIGURED                    ; eventId =  TestController: Release the Configuration ; errDescription = None ; details = None; status = None
+*Debug 08/16 18:07:03.686 Test Controller: Fetching the next event from the queue
+*Debug 08/16 18:07:03.686 Test Controller: event ID received =  TestController: Release the Configuration
+*Debug 08/16 18:07:03.686 ixFSM:   *** FSM Test Controller: --EVENT RECEIVED--:  TestController: Release the Configuration
+*Debug 08/16 18:07:03.743 ixFSM:   *** FSM Test Controller --EVENT PROCESSED--:  TestController: Release the Configuration
+*Debug 08/16 18:07:03.743 ixFSM:   *** FSM Test Controller --EXITING STATE--:  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:03.743 ixFSM:   *** FSM Test Controller --ENTERING STATE--:  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:03.744 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:03.744 Test Controller:              PUBLISHING PRESTATE CHANGE EVENT       
+*Debug 08/16 18:07:03.744 Test Controller:  PUBLISHING STATE : [ TestController: UNCONFIGURED                    ]
+*Debug 08/16 18:07:03.744 Test Controller: **********************************************************************************************
+*Debug 08/16 18:07:03.744 Test Controller : ixRunStateHandler received event  TestController: UNCONFIGURED                    
+*Debug 08/16 18:07:03.744 Test Controller : calling ::IxLoad eval {set ::ixCaptureMonitor {eventType CAPTURE_STOPPED status OK}}
+*Debug 08/16 18:07:03.746 Test Controller : calling ::IxLoad eval {::IxLoadPrivate::default_event_callback {eventType TEST_STOPPED status ERROR description {1} message {Failed to take ownership on ports [[1, 1, 9]]. Please use the "Clear Ownership and Reboot Ports" option or use "Forcefully Take Ownership" option}}}
+*Debug 08/16 18:07:03.775 Test Controller: Test Controller FSM: ENTRY Action for the State: UNCONFIGURED
+*Debug 08/16 18:07:03.775 Test Controller : TEST CONTROLLER: Clearing all Stat Plugins map.
+*Debug 08/16 18:07:03.775 Test Controller : clearStatPlugins(): Successfully CLEARED all the statistics plugins.
+*Debug 08/16 18:07:03.775 Test Controller : set resultFolderCreatedAtApplyConfig to False
+*Debug 08/16 18:07:03.775 Test Controller: Disconnecting from the stat-engine
+*Debug 08/16 18:07:03.776 Stat Controller: STAT CONTROLLER: disconnectFromAllSources()
+*Debug 08/16 18:07:03.776 Stat Controller: disconnectFromAllSources[764113456]: Disconnecting from []
+*Debug 08/16 18:07:03.776 Stat Controller: disconnectFromAllSources[764113456]: Done!
+*Debug 08/16 18:07:03.776 Stat Controller: Resetting stat threads
+*Debug 08/16 18:07:03.778 IxAnalyzer : Analyzer - set test state - 0

@@ -1,0 +1,3 @@
+Ram:4096
+disk:40
+vcpus:2

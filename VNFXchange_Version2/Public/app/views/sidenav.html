@@ -1,0 +1,43 @@
+<div class="nav-side-menu" >
+    
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li style="padding-left:20px">
+                <a ui-sref="dashboard">
+                     Dashboard
+                </a>
+            </li>
+			<li data-toggle="collapse" data-target="#image" class="collapsed " style="padding-left:20px">
+                <a ui-sref="vnfImage"> VNF Image Upload</a>
+            </li>
+            <li data-toggle="collapse" data-target="#products" class="collapsed " style="padding-left:20px">
+                 <a ui-sref="vnfgonboard"> VNF Onboarding </a>
+            </li>
+			
+			
+             <!-- <ul class="sub-menu collapse" id="products">
+                <li class="active"><a ui-sref="vnfonboardInfo">VNF Onboarding Info</a></li>
+                <li><a ui-sref="vnfgonboard">VNF Onboarding</a></li>                
+            </ul>  -->
+            <li data-toggle="collapse" data-target="#service" class="collapsed" style="padding-left:20px">
+                <a ui-sref="vnfFunc">VNF Functional Testing 
+				</a>
+            </li>           
+            <li data-toggle="collapse" data-target="#new" class="collapsed" style="padding-left:20px">
+                <a ui-sref="vnfPerformance">VNF Performance Testing  
+				</a>
+            </li>
+			<!--<li data-toggle="collapse" data-target="#new" class="collapsed" style="padding-left:20px">
+                <a ui-sref="vnfHelp">Help
+				</a>
+            </li>-->
+			
+            <li data-toggle="collapse" data-target="#new" class="collapsed" style="padding-left:20px">
+                <a ui-sref="vnfwikilink">VNF Wiki Link  
+				</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>

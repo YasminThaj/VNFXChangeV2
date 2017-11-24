@@ -1,0 +1,3 @@
+Ram:16384
+Disk:20
+vcpus:8
